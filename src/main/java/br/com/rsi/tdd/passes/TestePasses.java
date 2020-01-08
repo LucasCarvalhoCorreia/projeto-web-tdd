@@ -1,4 +1,4 @@
-package br.com.rsi.testes;
+package br.com.rsi.tdd.passes;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TesteSite {
+public class TestePasses {
 
 	private WebDriver driver;
 
@@ -27,18 +27,16 @@ public class TesteSite {
 	}
 
 	@Test
-	public void Cadastro() {
+	public void Cadastro() throws InterruptedException {
 
 		driver.get("http://advantageonlineshopping.com/#/");
-
-		WebDriverWait waitbt = new WebDriverWait(driver, 20);
-		WebElement bt = waitbt.until(ExpectedConditions.elementToBeClickable(By.id("hrefUserIcon")));
-		bt.click();
-
-		WebDriverWait waitCA = new WebDriverWait(driver, 10);
-		WebElement CA = waitCA.until(ExpectedConditions.elementToBeClickable(By.linkText("CREATE NEW ACCOUNT")));
-		CA.click();
-
+		
+		Thread.sleep(4000);
+		driver.findElement(By.id("hrefUserIcon")).click();
+		
+		Thread.sleep(2000);
+		driver.findElement(By.linkText("CREATE NEW ACCOUNT")).click();
+		
 		WebDriverWait waitUser = new WebDriverWait(driver, 10);
 		WebElement User = waitUser.until(ExpectedConditions.elementToBeClickable(By.name("usernameRegisterPage")));
 		User.sendKeys("lucascarvalho");
@@ -57,9 +55,8 @@ public class TesteSite {
 
 		WebElement Country = driver.findElement(By.name("countryListboxRegisterPage"));
 		Country.click();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Select comboBox = new Select(Country);
-		comboBox.selectByValue("object:139");
+		comboBox.selectByVisibleText("Brazil");
 
 		driver.findElement(By.name("cityRegisterPage")).sendKeys("Guarulhos");
 
@@ -82,9 +79,11 @@ public class TesteSite {
 		
 		driver.get("http://advantageonlineshopping.com/#/");
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.id("laptopsImg")).click();
+		WebDriverWait waitImg = new WebDriverWait(driver, 10);
+		WebElement Img = waitImg.until(ExpectedConditions.elementToBeClickable(By.id("laptopsImg")));
+		Img.click();
 		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.linkText("HP Chromebook 14 G1(ES)")).click();
 
 	}
@@ -100,8 +99,8 @@ public class TesteSite {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.id("autoComplete")).sendKeys("HP CHROMEBOOK 14 G1(ENERGY STAR)");
 		
-//		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-//		driver.findElement(By.cssSelector("img data-ng-src=\"/catalog/fetchImage?image_id=1249\" src=\"/catalog/fetchImage?image_id=1249\"")).click();
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		driver.findElement(By.xpath("//*[@id=\"output\"]/div/div[2]/a[2]/p")).click();
 
 	}
 
