@@ -34,7 +34,7 @@ public class TestePasses {
 		Thread.sleep(4000);
 		driver.findElement(By.id("hrefUserIcon")).click();
 		
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		driver.findElement(By.linkText("CREATE NEW ACCOUNT")).click();
 		
 		WebDriverWait waitUser = new WebDriverWait(driver, 10);
@@ -56,6 +56,7 @@ public class TestePasses {
 		WebElement Country = driver.findElement(By.name("countryListboxRegisterPage"));
 		Country.click();
 		Select comboBox = new Select(Country);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		comboBox.selectByVisibleText("Brazil");
 
 		driver.findElement(By.name("cityRegisterPage")).sendKeys("Guarulhos");
@@ -81,6 +82,7 @@ public class TestePasses {
 		
 		WebDriverWait waitImg = new WebDriverWait(driver, 10);
 		WebElement Img = waitImg.until(ExpectedConditions.elementToBeClickable(By.id("laptopsImg")));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Img.click();
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
