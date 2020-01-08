@@ -23,13 +23,13 @@ public class TestePasses {
 		driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
+		
+		driver.get("http://advantageonlineshopping.com/#/");
 
 	}
 
 	@Test
-	public void Cadastro() throws InterruptedException {
-
-		driver.get("http://advantageonlineshopping.com/#/");
+	public void cadastro() throws InterruptedException {
 		
 		Thread.sleep(4000);
 		driver.findElement(By.id("hrefUserIcon")).click();
@@ -76,9 +76,7 @@ public class TestePasses {
 	}
 
 	@Test
-	public void ConsultaMassa() {
-		
-		driver.get("http://advantageonlineshopping.com/#/");
+	public void consultaMassa() {
 		
 		WebDriverWait waitImg = new WebDriverWait(driver, 10);
 		WebElement Img = waitImg.until(ExpectedConditions.elementToBeClickable(By.id("laptopsImg")));
@@ -87,22 +85,21 @@ public class TestePasses {
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.linkText("HP Chromebook 14 G1(ES)")).click();
+		
+		driver.findElement(By.name("save_to_cart")).click();
 
 	}
 
 	@Test
-	public void ConsultaPesquisa() {
-		
-		driver.get("http://advantageonlineshopping.com/#/");
+	public void consultaPesquisa() throws InterruptedException {
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.id("menuSearch")).click();
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.id("autoComplete")).sendKeys("HP CHROMEBOOK 14 G1(ENERGY STAR)");
 		
-//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//		driver.findElement(By.xpath("//*[@id=\"output\"]/div/div[2]/a[2]/p")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//*[@id=\"output\"]/div/div[2]/a[2]/img")).click();
 
 	}
 
