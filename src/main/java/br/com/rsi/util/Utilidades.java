@@ -1,5 +1,7 @@
 package br.com.rsi.util;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,7 +35,9 @@ public class Utilidades {
 		criaConta.click();
 	}
 	
-	protected void logaNaConta() {
+	protected void logaNaConta() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		driver.findElement(By.id("hrefUserIcon")).click();
 		
 		driver.findElement(By.name("username")).sendKeys("lucascarvalhoo");
@@ -41,6 +45,8 @@ public class Utilidades {
 		driver.findElement(By.name("password")).sendKeys("10203040Lcc");
 		
 		driver.findElement(By.id("sign_in_btnundefined")).click();
+		
+		Thread.sleep(1000);
 	}
 
 }

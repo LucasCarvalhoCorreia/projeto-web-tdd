@@ -18,10 +18,10 @@ public class consultaMassaSucesso extends Utilidades{
 	}
 	
 	@Test
-	public void consultaMassa() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
+	public void consultaMassa() throws InterruptedException {
 		logaNaConta();
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		driver.findElement(By.id("laptopsImg")).click();
 		
@@ -29,9 +29,7 @@ public class consultaMassaSucesso extends Utilidades{
 		
 		driver.findElement(By.name("save_to_cart")).click();
 		
-		driver.findElement(By.id("menuCart")).click();
-		
-		driver.findElement(By.id("checkOutButton")).click();
+		driver.findElement(By.id("checkOutPopUp")).click();
 		
 		driver.findElement(By.id("next_btn")).click();
 		
@@ -47,6 +45,19 @@ public class consultaMassaSucesso extends Utilidades{
 		
 		driver.findElement(By.id("pay_now_btn_SAFEPAY")).click();
 	}
+	
+//	public static void takeSnapShot(String nomeDoArquivoImagem) throws Exception {
+//
+//		 WebDriver driver;
+//
+//        TakesScreenshot scrShot = ((TakesScreenshot) driver);
+//        File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
+//        String imageFileDir = "C://Users//abdiel.cordeiro//Pictures//";
+//        FileUtils.copyFile(srcFile, new File(imageFileDir, nomeDoArquivoImagem + ".png"));
+//
+// 
+//
+//    }
 	
 	@After
 	public void fim() {

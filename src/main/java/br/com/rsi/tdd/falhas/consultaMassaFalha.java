@@ -18,10 +18,10 @@ public class consultaMassaFalha extends Utilidades {
 	}
 	
 	@Test
-	public void consultaMassa() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
+	public void consultaMassa() throws InterruptedException {
 		logaNaConta();
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		driver.findElement(By.id("laptopsImg")).click();
 		
@@ -29,9 +29,7 @@ public class consultaMassaFalha extends Utilidades {
 		
 		driver.findElement(By.name("save_to_cart")).click();
 		
-		driver.findElement(By.id("menuCart")).click();
-		
-		driver.findElement(By.id("checkOutButton")).click();
+		driver.findElement(By.id("checkOutPopUp")).click();
 		
 		driver.findElement(By.id("next_btn")).click();
 		

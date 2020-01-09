@@ -22,14 +22,14 @@ public class consultaPesquisaFalha extends Utilidades {
 		
 		driver.findElement(By.id("menuSearch")).click();
 		
-		driver.findElement(By.id("autoComplete")).sendKeys("Mi");
+		driver.findElement(By.id("autoComplete")).sendKeys("HP");
 		
 		Thread.sleep(2000);
 		driver.findElement(By.id("menuSearch")).click();
 		
 		driver.findElement(By.xpath("//*[@id=\"search\"]/div/div/img")).click();
 		
-		driver.findElement(By.linkText("HP Roar Mini Wireless Speaker")).click();
+		driver.findElement(By.id("24")).click();
 	}
 	
 	@After
