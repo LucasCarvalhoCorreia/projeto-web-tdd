@@ -25,15 +25,14 @@ public class ConsultaPesquisaSucesso extends Utilidades {
 
 		driver.findElement(By.id("autoComplete")).sendKeys("HP" + Keys.ENTER);
 
-		driver.findElement(By.xpath("//*[@id=\"search\"]/div/div/img")).click();
-
 		driver.findElement(By.id("24")).click();
 		
-		tirarPrintsDeSucesso("ConsultaPesquisa");
+		driver.findElement(By.id("bunny")).click();
 	}
 
 	@After
-	public void fim() {
+	public void fim() throws Exception {
+		tirarPrintsDeSucesso("ConsultaPesquisa");
 		fechaBrowser();
 	}
 

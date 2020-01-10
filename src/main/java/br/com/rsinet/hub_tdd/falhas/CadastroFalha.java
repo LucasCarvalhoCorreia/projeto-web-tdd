@@ -21,16 +21,16 @@ public class CadastroFalha extends Utilidades {
 	}
 
 	@Test
-	public void cadastro() throws Exception {
-		criarNovaConta();
-
+	public void cadastro() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		criarNovaConta();
 
 		driver.findElement(By.name("usernameRegisterPage")).sendKeys("lucascarvalhoo");
 
 		driver.findElement(By.name("emailRegisterPage")).sendKeys("lucas.carvalho99@hotmail.com");
 
-		driver.findElement(By.name("passwordRegisterPage")).sendKeys("10203040Lcc");
+		driver.findElement(By.name("passwordRegisterPage")).sendKeys("102030400Lcc");
 
 		driver.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("10203040Lcc");
 
@@ -61,18 +61,18 @@ public class CadastroFalha extends Utilidades {
 
 		driver.findElement(By.id("register_btnundefined")).click();
 
-		Thread.sleep(1000);
-		WebElement teste = driver.findElement(By.xpath("//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[1]"));
-		String nome = teste.getText();
+		WebElement teste = driver.findElement(By.xpath("//*[@id=\"formCover\"]/div[1]/div[2]/sec-view[2]/div/label"));
+		String nome = teste.getText().toString();
 
-		assertFalse("Usuário já existente", nome.equals("User name already exists"));
+		driver.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("");
 		
-		tirarPrintsDeFalha("Cadastro");
+		assertFalse("A senha não é a mesma!", nome.equals("Passwords do not match"));
 	}
 
 	@After
-	public void fim() {
-		fechaBrowser();
+	public void fim() throws Exception {
+		tirarPrintsDeFalha("Cadastro");
+//		fechaBrowser();
 	}
 
 }

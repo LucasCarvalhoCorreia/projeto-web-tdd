@@ -1,7 +1,5 @@
 package br.com.rsinet.hub_tdd.passes;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,8 +19,6 @@ public class CadastroSucesso extends Utilidades {
 	@Test
 	public void cadastro() throws Exception {
 		criarNovaConta();
-
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		driver.findElement(By.name("usernameRegisterPage")).sendKeys("lucascarvalhoo");
 
@@ -58,12 +54,11 @@ public class CadastroSucesso extends Utilidades {
 		driver.findElement(By.name("i_agree")).click();
 
 		driver.findElement(By.id("register_btnundefined")).click();
-		
-		tirarPrintsDeSucesso("Cadastro");
 	}
 
 	@After
-	public void fim() {
+	public void fim() throws Exception {
+		tirarPrintsDeSucesso("Cadastro");
 		fechaBrowser();
 	}
 

@@ -19,9 +19,9 @@ public class ConsultaMassaFalha extends Utilidades {
 
 	@Test
 	public void consultaMassa() throws Exception {
-		logaNaConta();
-
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		logaNaConta();
 
 		driver.findElement(By.id("laptopsImg")).click();
 
@@ -44,12 +44,11 @@ public class ConsultaMassaFalha extends Utilidades {
 		driver.findElement(By.name("save_safepay")).click();
 
 		driver.findElement(By.id("pay_now_btn_SAFEPAY")).click();
-		
-		tirarPrintsDeSucesso("ConsultaMassa");
 	}
 
 	@After
-	public void fim() {
+	public void fim() throws Exception {
+		tirarPrintsDeSucesso("ConsultaMassa");
 		fechaBrowser();
 	}
 

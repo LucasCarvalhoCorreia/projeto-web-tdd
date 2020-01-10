@@ -6,6 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
@@ -22,20 +23,16 @@ public class ConsultaPesquisaFalha extends Utilidades {
 
 		driver.findElement(By.id("menuSearch")).click();
 
-		driver.findElement(By.id("autoComplete")).sendKeys("HP");
-
-		Thread.sleep(2000);
-		driver.findElement(By.id("menuSearch")).click();
-
-		driver.findElement(By.xpath("//*[@id=\"search\"]/div/div/img")).click();
+		driver.findElement(By.id("autoComplete")).sendKeys("HP" + Keys.ENTER);
 
 		driver.findElement(By.id("24")).click();
 		
-		tirarPrintsDeSucesso("ConsultaPesquisa");
+		driver.findElement(By.id("bunny")).click();
 	}
 
 	@After
-	public void fim() {
+	public void fim() throws Exception {
+		tirarPrintsDeSucesso("ConsultaPesquisa");
 		fechaBrowser();
 	}
 
