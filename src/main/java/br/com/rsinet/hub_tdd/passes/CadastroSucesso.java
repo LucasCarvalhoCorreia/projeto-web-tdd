@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
-public class CadastroSucesso extends Utilidades{
+public class CadastroSucesso extends Utilidades {
 
 	@Before
 	public void inicio() throws InterruptedException {
@@ -19,13 +19,13 @@ public class CadastroSucesso extends Utilidades{
 	}
 
 	@Test
-	public void cadastro() {
+	public void cadastro() throws Exception {
 		criarNovaConta();
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
+
 		driver.findElement(By.name("usernameRegisterPage")).sendKeys("lucascarvalhoo");
-		
+
 		driver.findElement(By.name("emailRegisterPage")).sendKeys("lucas.carvalho99@hotmail.com");
 
 		driver.findElement(By.name("passwordRegisterPage")).sendKeys("10203040Lcc");
@@ -40,9 +40,9 @@ public class CadastroSucesso extends Utilidades{
 
 		WebElement Country = driver.findElement(By.name("countryListboxRegisterPage"));
 		Country.click();
-		
+
 		Select comboBox = new Select(Country);
-		
+
 		comboBox.selectByVisibleText("Brazil");
 
 		driver.findElement(By.name("cityRegisterPage")).sendKeys("Guarulhos");
@@ -58,6 +58,8 @@ public class CadastroSucesso extends Utilidades{
 		driver.findElement(By.name("i_agree")).click();
 
 		driver.findElement(By.id("register_btnundefined")).click();
+		
+		tirarPrintsDeSucesso("Cadastro");
 	}
 
 	@After

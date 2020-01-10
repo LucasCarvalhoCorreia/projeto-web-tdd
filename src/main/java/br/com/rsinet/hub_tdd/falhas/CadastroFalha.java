@@ -21,7 +21,7 @@ public class CadastroFalha extends Utilidades {
 	}
 
 	@Test
-	public void cadastro() throws InterruptedException {
+	public void cadastro() throws Exception {
 		criarNovaConta();
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -39,7 +39,7 @@ public class CadastroFalha extends Utilidades {
 		driver.findElement(By.name("last_nameRegisterPage")).sendKeys("Carvalho Correia");
 
 		driver.findElement(By.name("phone_numberRegisterPage")).sendKeys("967553055");
-		
+
 		WebElement Country = driver.findElement(By.name("countryListboxRegisterPage"));
 		Country.click();
 
@@ -60,12 +60,14 @@ public class CadastroFalha extends Utilidades {
 		driver.findElement(By.name("i_agree")).click();
 
 		driver.findElement(By.id("register_btnundefined")).click();
-		
-	    Thread.sleep(1000);
+
+		Thread.sleep(1000);
 		WebElement teste = driver.findElement(By.xpath("//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[1]"));
 		String nome = teste.getText();
 
 		assertFalse("Usuário já existente", nome.equals("User name already exists"));
+		
+		tirarPrintsDeFalha("Cadastro");
 	}
 
 	@After
