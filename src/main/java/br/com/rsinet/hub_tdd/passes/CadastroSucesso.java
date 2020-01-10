@@ -1,6 +1,4 @@
-package br.com.rsi.tdd.falhas;
-
-import static org.junit.Assert.assertFalse;
+package br.com.rsinet.hub_tdd.passes;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,9 +9,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import br.com.rsi.util.Utilidades;
+import br.com.rsinet.hub_tdd.util.Utilidades;
 
-public class cadastroFalha extends Utilidades {
+public class CadastroSucesso extends Utilidades{
 
 	@Before
 	public void inicio() throws InterruptedException {
@@ -21,13 +19,13 @@ public class cadastroFalha extends Utilidades {
 	}
 
 	@Test
-	public void cadastro() throws InterruptedException {
+	public void cadastro() {
 		criarNovaConta();
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+		
 		driver.findElement(By.name("usernameRegisterPage")).sendKeys("lucascarvalhoo");
-
+		
 		driver.findElement(By.name("emailRegisterPage")).sendKeys("lucas.carvalho99@hotmail.com");
 
 		driver.findElement(By.name("passwordRegisterPage")).sendKeys("10203040Lcc");
@@ -39,12 +37,12 @@ public class cadastroFalha extends Utilidades {
 		driver.findElement(By.name("last_nameRegisterPage")).sendKeys("Carvalho Correia");
 
 		driver.findElement(By.name("phone_numberRegisterPage")).sendKeys("967553055");
-		
+
 		WebElement Country = driver.findElement(By.name("countryListboxRegisterPage"));
 		Country.click();
-
+		
 		Select comboBox = new Select(Country);
-
+		
 		comboBox.selectByVisibleText("Brazil");
 
 		driver.findElement(By.name("cityRegisterPage")).sendKeys("Guarulhos");
@@ -60,12 +58,6 @@ public class cadastroFalha extends Utilidades {
 		driver.findElement(By.name("i_agree")).click();
 
 		driver.findElement(By.id("register_btnundefined")).click();
-		
-	    Thread.sleep(1000);
-		WebElement teste = driver.findElement(By.xpath("//*[@id=\"registerPage\"]/article/sec-form/div[2]/label[1]"));
-		String nome = teste.getText();
-
-		assertFalse("Usuário já existente", nome.equals("User name already exists"));
 	}
 
 	@After

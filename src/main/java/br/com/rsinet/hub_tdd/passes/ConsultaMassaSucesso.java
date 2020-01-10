@@ -1,4 +1,4 @@
-package br.com.rsi.tdd.falhas;
+package br.com.rsinet.hub_tdd.passes;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,9 +8,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import br.com.rsi.util.Utilidades;
+import br.com.rsinet.hub_tdd.util.Utilidades;
 
-public class consultaMassaFalha extends Utilidades {
+public class ConsultaMassaSucesso extends Utilidades{
 	
 	@Before
 	public void inicio() throws InterruptedException {
@@ -46,9 +46,22 @@ public class consultaMassaFalha extends Utilidades {
 		driver.findElement(By.id("pay_now_btn_SAFEPAY")).click();
 	}
 	
+//	public static void takeSnapShot(String nomeDoArquivoImagem) throws Exception {
+//
+//		 WebDriver driver;
+//
+//        TakesScreenshot scrShot = ((TakesScreenshot) driver);
+//        File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
+//        String imageFileDir = "C://Users//abdiel.cordeiro//Pictures//";
+//        FileUtils.copyFile(srcFile, new File(imageFileDir, nomeDoArquivoImagem + ".png"));
+//
+// 
+//
+//    }
+	
 	@After
 	public void fim() {
 		fechaBrowser();
 	}
-	
+
 }
