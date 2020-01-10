@@ -17,21 +17,21 @@ public class Utilidades {
 
 	protected WebDriver driver;
 
-	protected void iniciaBrowser() throws InterruptedException {
+	protected void iniciaBrowser() {
 		driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
 
 		driver.get("http://advantageonlineshopping.com/#/");
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	protected void fechaBrowser() {
 		driver.quit();
 	}
 
-	protected void criarNovaConta() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+	protected void criarNovaConta() {
 		driver.findElement(By.id("hrefUserIcon")).click();
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -39,9 +39,9 @@ public class Utilidades {
 		driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/a[2]")).sendKeys(Keys.ENTER);
 	}
 
-	protected void logaNaConta() throws InterruptedException {
+	protected void logaNaConta() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+		
 		driver.findElement(By.id("hrefUserIcon")).click();
 
 		driver.findElement(By.name("username")).sendKeys("lucascarvalhoo");
