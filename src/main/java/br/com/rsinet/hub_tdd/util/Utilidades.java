@@ -10,33 +10,27 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Utilidades {
+import br.com.rsinet.hub_tdd.pageObject.HomePage;
 
-	protected WebDriver driver;
+public class Utilidades extends HomePage{
 
-	protected void iniciaBrowser() {
+	protected  WebDriver driver;
+
+	protected WebDriver iniciaBrowser() {
 		driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
 
 		driver.get("http://advantageonlineshopping.com/#/");
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		return driver;
 	}
 
-	protected void fechaBrowser() {
+	protected WebDriver fechaBrowser() {
 		driver.quit();
-	}
-
-	protected void criarNovaConta() {
-		driver.findElement(By.id("hrefUserIcon")).click();
-
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/login-modal/div/div/div[3]/a[2]")));
-		driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/a[2]")).sendKeys(Keys.ENTER);
+		
+		return driver;
 	}
 
 	protected void logaNaConta() {

@@ -2,30 +2,30 @@ package br.com.rsinet.hub_tdd.falhas;
 
 import static org.junit.Assert.assertFalse;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import br.com.rsinet.hub_tdd.pageObject.Modulo;
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
 public class CadastroFalha extends Utilidades {
 
+	private static WebDriver driver;
+	
 	@Before
 	public void inicio() throws InterruptedException {
-		iniciaBrowser();
+		driver = iniciaBrowser();
 	}
 
 	@Test
 	public void cadastro() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Modulo.criarNovaConta(driver);
 		
-		criarNovaConta();
-
 		driver.findElement(By.name("usernameRegisterPage")).sendKeys("lucascarvalhoo");
 
 		driver.findElement(By.name("emailRegisterPage")).sendKeys("lucas.carvalho99@hotmail.com");
@@ -69,7 +69,7 @@ public class CadastroFalha extends Utilidades {
 	@After
 	public void fim() throws Exception {
 		tirarPrintsDeFalha("Cadastro");
-		fechaBrowser();
+		driver = fechaBrowser();
 	}
 
 }
