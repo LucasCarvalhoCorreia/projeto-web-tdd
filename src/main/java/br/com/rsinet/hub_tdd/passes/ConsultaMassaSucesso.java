@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_tdd.passes;
 
+import static org.junit.Assert.*;
+
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -33,22 +35,12 @@ public class ConsultaMassaSucesso extends Utilidades {
 		driver.findElement(By.linkText("HP Chromebook 14 G1(ES)")).click();
 
 		driver.findElement(By.name("save_to_cart")).click();
-
+		
 		driver.findElement(By.id("checkOutPopUp")).click();
 
-		driver.findElement(By.id("next_btn")).click();
-
-		WebElement User = driver.findElement(By.name("safepay_username"));
-		User.clear();
-		User.sendKeys("lucascarvalhoo");
-
-		WebElement Pass = driver.findElement(By.name("safepay_password"));
-		Pass.clear();
-		Pass.sendKeys("10203040Lcc");
-
-		driver.findElement(By.name("save_safepay")).click();
-
-		driver.findElement(By.id("pay_now_btn_SAFEPAY")).click();
+		String msgPagamento = driver.findElement(By.xpath("//*[@id=\"product\"]/td[2]/a/label[1]")).getText();
+		
+		assertTrue("Compra efetuada com sucesso!", msgPagamento.equals("QTY: 1"));
 	}
 
 	@After

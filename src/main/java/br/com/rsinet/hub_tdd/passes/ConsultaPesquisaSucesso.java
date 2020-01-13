@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_tdd.passes;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -24,16 +26,20 @@ public class ConsultaPesquisaSucesso extends Utilidades {
 		driver.findElement(By.id("menuSearch")).click();
 
 		driver.findElement(By.id("autoComplete")).sendKeys("HP" + Keys.ENTER);
-
+		
 		driver.findElement(By.id("24")).click();
 		
 		driver.findElement(By.id("bunny")).click();
+		
+		String elemento = driver.findElement(By.xpath("//*[@id=\"Description\"]/h1")).getText();
+		
+		assertTrue("Pesquisa efetuada com sucesso!", elemento.equals("HP ROAR MINI WIRELESS SPEAKER"));
 	}
 
 	@After
 	public void fim() throws Exception {
 		tirarPrintsDeSucesso("ConsultaPesquisa");
-		fechaBrowser();
+//		fechaBrowser();
 	}
 
 }

@@ -1,5 +1,7 @@
 package br.com.rsinet.hub_tdd.falhas;
 
+import static org.junit.Assert.assertFalse;
+
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -23,16 +25,16 @@ public class ConsultaPesquisaFalha extends Utilidades {
 
 		driver.findElement(By.id("menuSearch")).click();
 
-		driver.findElement(By.id("autoComplete")).sendKeys("HP" + Keys.ENTER);
+		driver.findElement(By.id("autoComplete")).sendKeys("fones" + Keys.ENTER);
 
-		driver.findElement(By.id("24")).click();
+		String pesquisa = driver.findElement(By.xpath("//*[@id=\"searchPage\"]/div[3]/div/label/span")).getText();
 		
-		driver.findElement(By.id("bunny")).click();
+		assertFalse("Nenhum resultado encontrado!", pesquisa.equals("No results for \"fones\""));
 	}
 
 	@After
 	public void fim() throws Exception {
-		tirarPrintsDeSucesso("ConsultaPesquisa");
+		tirarPrintsDeFalha("ConsultaPesquisa");
 		fechaBrowser();
 	}
 

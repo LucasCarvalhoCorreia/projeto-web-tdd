@@ -1,5 +1,8 @@
 package br.com.rsinet.hub_tdd.falhas;
 
+
+import static org.junit.Assert.*;
+
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -31,29 +34,22 @@ public class ConsultaMassaFalha extends Utilidades {
 		executor.executeScript("arguments[0].click();", elemento);
 
 		driver.findElement(By.linkText("HP Chromebook 14 G1(ES)")).click();
+		
+		driver.findElement(By.name("quantity")).sendKeys("1");
 
 		driver.findElement(By.name("save_to_cart")).click();
-
+		
 		driver.findElement(By.id("checkOutPopUp")).click();
-
-		driver.findElement(By.id("next_btn")).click();
-
-		WebElement User = driver.findElement(By.name("safepay_username"));
-		User.clear();
-		User.sendKeys("lucascarvalhoo");
-
-		WebElement Pass = driver.findElement(By.name("safepay_password"));
-		Pass.clear();
-		Pass.sendKeys("10203040Lcc");
-
-		driver.findElement(By.name("save_safepay")).click();
-
-		driver.findElement(By.id("pay_now_btn_SAFEPAY")).click();
+		
+		WebElement mensagem = driver.findElement(By.xpath("//*[@id=\"product\"]/td[2]/a/label[1]"));
+		String aviso = mensagem.getText().toString();
+		
+		assertFalse("Quantidade errada.", aviso.equals("QTY: 10"));
 	}
 
 	@After
 	public void fim() throws Exception {
-		tirarPrintsDeSucesso("ConsultaMassa");
+		tirarPrintsDeFalha("ConsultaMassa");
 		fechaBrowser();
 	}
 

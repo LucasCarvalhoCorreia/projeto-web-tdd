@@ -1,5 +1,9 @@
 package br.com.rsinet.hub_tdd.passes;
 
+import static org.junit.Assert.assertTrue;
+
+import java.util.concurrent.TimeUnit;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,9 +22,11 @@ public class CadastroSucesso extends Utilidades {
 
 	@Test
 	public void cadastro() throws Exception {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		criarNovaConta();
 
-		driver.findElement(By.name("usernameRegisterPage")).sendKeys("lucascarvalhoo");
+		driver.findElement(By.name("usernameRegisterPage")).sendKeys("lucascarvalho");
 
 		driver.findElement(By.name("emailRegisterPage")).sendKeys("lucas.carvalho99@hotmail.com");
 
@@ -54,6 +60,10 @@ public class CadastroSucesso extends Utilidades {
 		driver.findElement(By.name("i_agree")).click();
 
 		driver.findElement(By.id("register_btnundefined")).click();
+		
+		String pass = driver.findElement(By.xpath("//*[@id=\"formCover\"]/div[1]/div[2]/sec-view[2]/div/label")).getText();
+		
+		assertTrue("Cadastro efetuado com sucesso", pass.equals("Confirm password"));
 	}
 
 	@After

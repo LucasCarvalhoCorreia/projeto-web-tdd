@@ -61,18 +61,15 @@ public class CadastroFalha extends Utilidades {
 
 		driver.findElement(By.id("register_btnundefined")).click();
 
-		WebElement teste = driver.findElement(By.xpath("//*[@id=\"formCover\"]/div[1]/div[2]/sec-view[2]/div/label"));
-		String nome = teste.getText().toString();
+		String nome = driver.findElement(By.xpath("//*[@id=\"formCover\"]/div[1]/div[2]/sec-view[2]/div/label")).getText();
 
-		driver.findElement(By.name("confirm_passwordRegisterPage")).sendKeys("");
-		
 		assertFalse("A senha não é a mesma!", nome.equals("Passwords do not match"));
 	}
 
 	@After
 	public void fim() throws Exception {
 		tirarPrintsDeFalha("Cadastro");
-//		fechaBrowser();
+		fechaBrowser();
 	}
 
 }

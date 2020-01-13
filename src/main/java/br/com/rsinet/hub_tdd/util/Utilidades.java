@@ -44,7 +44,7 @@ public class Utilidades {
 		
 		driver.findElement(By.id("hrefUserIcon")).click();
 
-		driver.findElement(By.name("username")).sendKeys("lucascarvalhoo");
+		driver.findElement(By.name("username")).sendKeys("lucascarvalho");
 
 		driver.findElement(By.name("password")).sendKeys("10203040Lcc");
 
