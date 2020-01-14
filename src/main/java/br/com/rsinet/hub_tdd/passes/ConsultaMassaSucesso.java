@@ -5,10 +5,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.hub_tdd.pageObject.Modulo;
+import br.com.rsinet.hub_tdd.pageObject.PesquisaPage;
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
 public class ConsultaMassaSucesso extends Utilidades {
@@ -21,15 +21,15 @@ public class ConsultaMassaSucesso extends Utilidades {
 	}
 
 	@Test
-	public void consultaMassa() {
+	public void consultaMassa() throws Exception {
 		Modulo.logaNaConta(driver);
 		
 		Modulo.produtoCategoria(driver);
 
 		Modulo.pesquisaCategoria(driver);
 
-		String msgPagamento = driver.findElement(By.xpath("//*[@id=\"product\"]/td[2]/a/label[1]")).getText();
-		assertTrue("Compra efetuada com sucesso!", msgPagamento.equals("QTY: 1"));
+		String aviso = PesquisaPage.qtd_Produto.getText();
+		assertTrue("Compra efetuada com sucesso!", aviso.equals("QTY: 1"));
 	}
 
 	@After

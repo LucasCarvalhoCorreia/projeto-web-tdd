@@ -6,11 +6,10 @@ import static org.junit.Assert.assertFalse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import br.com.rsinet.hub_tdd.pageObject.Modulo;
+import br.com.rsinet.hub_tdd.pageObject.PesquisaPage;
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
 public class ConsultaMassaFalha extends Utilidades {
@@ -30,9 +29,7 @@ public class ConsultaMassaFalha extends Utilidades {
 
 		Modulo.pesquisaCategoriaErrada(driver);
 		
-		WebElement mensagem = driver.findElement(By.xpath("//*[@id=\"product\"]/td[2]/a/label[1]"));
-		String aviso = mensagem.getText().toString();
-		
+		String aviso = PesquisaPage.qtd_Produto.getText();
 		assertFalse("Quantidade errada.", aviso.equals("QTY: 10"));
 	}
 

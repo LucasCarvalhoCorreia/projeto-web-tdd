@@ -5,10 +5,11 @@ import static org.junit.Assert.assertFalse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.hub_tdd.pageObject.Modulo;
+import br.com.rsinet.hub_tdd.util.Constant;
+import br.com.rsinet.hub_tdd.util.ExcelUtils;
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
 public class ConsultaPesquisaFalha extends Utilidades {
@@ -22,10 +23,10 @@ public class ConsultaPesquisaFalha extends Utilidades {
 
 	@Test
 	public void consultaPesquisa() throws Exception {
-		Modulo.barraDePesquisaErrado(driver);
-		
-		String pesquisa = driver.findElement(By.xpath("//*[@id=\"searchPage\"]/div[3]/div/label/span")).getText();
-		assertFalse("Nenhum resultado encontrado!", pesquisa.equals("No results for \"fones\""));
+		String resposta = Modulo.barraDePesquisaErrado(driver);
+
+		String elemento = ExcelUtils.getCellData(1, Constant.txt_PesquisaBarraErro);
+		assertFalse("Nenhum resultado encontrado!", resposta.equals("No results for " + "\"" + elemento + "\""));
 	}
 
 	@After

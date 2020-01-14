@@ -5,9 +5,9 @@ import static org.junit.Assert.assertTrue;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import br.com.rsinet.hub_tdd.pageObject.CadastroPage;
 import br.com.rsinet.hub_tdd.pageObject.Modulo;
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
@@ -26,7 +26,7 @@ public class CadastroSucesso extends Utilidades {
 
 		Modulo.cadastrarUsuario(driver);
 		
-		String pass = driver.findElement(By.xpath("//*[@id=\"formCover\"]/div[1]/div[2]/sec-view[2]/div/label")).getText();
+		String pass = CadastroPage.not_Password.getText();
 		assertTrue("Cadastro efetuado com sucesso", pass.equals("Confirm password"));
 	}
 
