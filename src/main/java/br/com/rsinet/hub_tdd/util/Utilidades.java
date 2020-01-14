@@ -1,11 +1,8 @@
 package br.com.rsinet.hub_tdd.util;
 
 import java.io.File;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -31,18 +28,6 @@ public class Utilidades extends HomePage{
 		driver.quit();
 		
 		return driver;
-	}
-
-	protected void logaNaConta() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
-		driver.findElement(By.id("hrefUserIcon")).click();
-
-		driver.findElement(By.name("username")).sendKeys("lucascarvalho");
-
-		driver.findElement(By.name("password")).sendKeys("10203040Lcc");
-
-		driver.findElement(By.id("sign_in_btnundefined")).sendKeys(Keys.ENTER);
 	}
 
 	protected void tirarPrintsDeSucesso(String nomeDaImagem) throws Exception {
