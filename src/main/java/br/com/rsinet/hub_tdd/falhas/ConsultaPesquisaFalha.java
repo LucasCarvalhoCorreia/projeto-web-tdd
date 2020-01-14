@@ -30,7 +30,7 @@ public class ConsultaPesquisaFalha extends Utilidades {
 
 	@After
 	public void fim() throws Exception {
-		tirarPrintsDeFalha("ConsultaPesquisa");
+		tirarPrintsDeFalha("ConsultaPesquisaFalha ", driver);
 		driver = fechaBrowser();
 	}
 

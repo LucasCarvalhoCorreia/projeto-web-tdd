@@ -32,7 +32,7 @@ public class CadastroFalha extends Utilidades {
 
 	@After
 	public void fim() throws Exception {
-		tirarPrintsDeFalha("Cadastro");
+		tirarPrintsDeFalha("CadastroFalha ", driver);
 		driver = fechaBrowser();
 	}
 

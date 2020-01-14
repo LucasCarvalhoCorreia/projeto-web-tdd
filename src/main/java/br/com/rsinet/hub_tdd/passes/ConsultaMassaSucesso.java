@@ -34,7 +34,7 @@ public class ConsultaMassaSucesso extends Utilidades {
 
 	@After
 	public void fim() throws Exception {
-		tirarPrintsDeSucesso("ConsultaMassa");
+		tirarPrintsDeSucesso("ConsultaMassaSucesso ", driver);
 		driver = fechaBrowser();
 	}
 
