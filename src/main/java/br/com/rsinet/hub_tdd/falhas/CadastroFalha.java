@@ -1,36 +1,36 @@
 package br.com.rsinet.hub_tdd.falhas;
 
-import static org.junit.Assert.assertFalse;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
+import br.com.rsinet.hub_tdd.modulos.ModuloCadastro;
+import br.com.rsinet.hub_tdd.modulos.ModuloHome;
 import br.com.rsinet.hub_tdd.pageObject.CadastroPage;
-import br.com.rsinet.hub_tdd.pageObject.Modulo;
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
 public class CadastroFalha extends Utilidades {
 
 	private static WebDriver driver;
 
-	@Before
+	@BeforeMethod
 	public void inicio() throws InterruptedException {
 		driver = iniciaBrowser();
 	}
 
 	@Test
 	public void cadastro() throws Exception {
-		Modulo.criarNovaConta(driver);
+		ModuloHome.criarNovaConta(driver);
 		
-		Modulo.cadastrarUsuarioErrado(driver);
+		ModuloCadastro.cadastrarUsuarioErrado(driver);
 
 		String pass = CadastroPage.not_Password.getText();
-		assertFalse("A senha não é a mesma!", pass.equals("Passwords do not match"));
+		Assert.assertFalse(pass.equals("Passwords do not match"), "A senha não é a mesma!");
 	}
 
-	@After
+	@AfterMethod
 	public void fim() throws Exception {
 		tirarPrintsDeFalha("CadastroFalha ", driver);
 		driver = fechaBrowser();

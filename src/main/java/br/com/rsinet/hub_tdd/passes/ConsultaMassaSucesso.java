@@ -1,13 +1,13 @@
 package br.com.rsinet.hub_tdd.passes;
 
-import static org.junit.Assert.assertTrue;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-import br.com.rsinet.hub_tdd.pageObject.Modulo;
+import br.com.rsinet.hub_tdd.modulos.ModuloHome;
+import br.com.rsinet.hub_tdd.modulos.ModuloPesquisa;
 import br.com.rsinet.hub_tdd.pageObject.PesquisaPage;
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
@@ -15,24 +15,24 @@ public class ConsultaMassaSucesso extends Utilidades {
 
 	private static WebDriver driver;
 	
-	@Before
+	@BeforeMethod
 	public void inicio() {
 		driver = iniciaBrowser();
 	}
 
 	@Test
 	public void consultaMassa() throws Exception {
-		Modulo.logaNaConta(driver);
+		ModuloHome.logaNaConta(driver);
 		
-		Modulo.produtoCategoria(driver);
+		ModuloHome.produtoCategoria(driver);
 
-		Modulo.pesquisaCategoria(driver);
+		ModuloPesquisa.pesquisaCategoria(driver);
 
 		String aviso = PesquisaPage.qtd_Produto.getText();
-		assertTrue("Compra efetuada com sucesso!", aviso.equals("QTY: 1"));
+		Assert.assertTrue(aviso.equals("QTY: 1"), "Compra efetuada com sucesso!");
 	}
 
-	@After
+	@AfterMethod
 	public void fim() throws Exception {
 		tirarPrintsDeSucesso("ConsultaMassaSucesso ", driver);
 		driver = fechaBrowser();
