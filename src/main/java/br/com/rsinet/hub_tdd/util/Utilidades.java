@@ -10,9 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import br.com.rsinet.hub_tdd.pageObject.HomePage;
-
-public class Utilidades extends HomePage{
+public class Utilidades {
 
 	protected  WebDriver driver;
 

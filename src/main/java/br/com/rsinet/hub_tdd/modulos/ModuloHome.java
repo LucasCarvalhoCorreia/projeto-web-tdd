@@ -79,6 +79,9 @@ public class ModuloHome {
 
 		HomePage.txt_Pesquisa.sendKeys(ExcelUtils.getCellData(1, Constant.txt_PesquisaBarraErro), Keys.ENTER);
 		
+		Thread.sleep(1000);
+		HomePage.bt_FechaSugestao.click();
+		
 		return HomePage.result_Produto.getText();
 	}
 
