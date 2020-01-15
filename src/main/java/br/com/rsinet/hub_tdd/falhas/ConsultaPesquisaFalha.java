@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import br.com.rsinet.hub_tdd.modulos.ModuloHome;
+import br.com.rsinet.hub_tdd.pageObject.HomePage;
 import br.com.rsinet.hub_tdd.util.Constant;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
 import br.com.rsinet.hub_tdd.util.Utilidades;
@@ -22,10 +23,11 @@ public class ConsultaPesquisaFalha extends Utilidades {
 
 	@Test
 	public void consultaPesquisa() throws Exception {
-		String resposta = ModuloHome.barraDePesquisaErrado(driver);
+		ModuloHome.barraDePesquisaErrado(driver);
 
 		String elemento = ExcelUtils.getCellData(1, Constant.txt_PesquisaBarraErro);
-		Assert.assertFalse(resposta.equals("No results for " + "\"" + elemento + "\""), "Nenhum resultado encontrado!");
+		String resposta = HomePage.result_Produto.getText();
+		Assert.assertFalse(resposta.equals("No results for " + "\"" + elemento + "\""), "Nenhum resultado encontrado para "+elemento+"!");
 	}
 
 	@AfterMethod

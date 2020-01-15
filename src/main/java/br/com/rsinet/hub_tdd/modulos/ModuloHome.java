@@ -68,7 +68,7 @@ public class ModuloHome {
 		HomePage.bt_FechaSugestao.click();
 	}
 
-	public static String barraDePesquisaErrado(WebDriver driver) throws Exception {
+	public static void barraDePesquisaErrado(WebDriver driver) throws Exception {
 		PageFactory.initElements(driver, HomePage.class);
 
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaBarra");
@@ -81,8 +81,6 @@ public class ModuloHome {
 		
 		Thread.sleep(1000);
 		HomePage.bt_FechaSugestao.click();
-		
-		return HomePage.result_Produto.getText();
 	}
 
 }

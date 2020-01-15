@@ -56,4 +56,7 @@ public class CadastroPage {
 	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"formCover\"]/div[1]/div[2]/sec-view[2]/div/label")
 	public static WebElement not_Password;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"menuUserLink\"]/span")
+	public static WebElement user_Logon;
 }

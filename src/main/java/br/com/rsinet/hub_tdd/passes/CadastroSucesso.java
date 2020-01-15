@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 import br.com.rsinet.hub_tdd.modulos.ModuloCadastro;
 import br.com.rsinet.hub_tdd.modulos.ModuloHome;
 import br.com.rsinet.hub_tdd.pageObject.CadastroPage;
+import br.com.rsinet.hub_tdd.util.Constant;
+import br.com.rsinet.hub_tdd.util.ExcelUtils;
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
 public class CadastroSucesso extends Utilidades {
@@ -26,8 +28,9 @@ public class CadastroSucesso extends Utilidades {
 
 		ModuloCadastro.cadastrarUsuario(driver);
 		
-		String pass = CadastroPage.not_Password.getText();
-		Assert.assertTrue(pass.equals("Confirm password"), "Cadastro efetuado com sucesso");
+		String usuario = ExcelUtils.getCellData(1, Constant.txt_UserName);
+		String pass = CadastroPage.user_Logon.getText();
+		Assert.assertTrue(pass.equals(usuario), "Cadastro efetuado com sucesso");
 	}
 
 	@AfterMethod

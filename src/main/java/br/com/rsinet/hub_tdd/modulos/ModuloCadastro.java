@@ -51,6 +51,8 @@ public class ModuloCadastro {
 		CadastroPage.check_Agree.click();
 		
 		CadastroPage.bt_Registrar.click();
+		
+		Thread.sleep(1000);
 	}
 
 	public static void cadastrarUsuarioErrado(WebDriver driver) throws Exception {
