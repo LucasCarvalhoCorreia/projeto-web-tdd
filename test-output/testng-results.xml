@@ -2,30 +2,30 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14623" started-at="2020-01-15T11:49:55 BRT" finished-at="2020-01-15T11:50:09 BRT">
+  <suite name="Default suite" duration-ms="13610" started-at="2020-01-15T22:31:49 BRT" finished-at="2020-01-15T22:32:02 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14623" started-at="2020-01-15T11:49:55 BRT" finished-at="2020-01-15T11:50:09 BRT">
-      <class name="br.com.rsinet.hub_tdd.falhas.ConsultaPesquisaFalha">
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.falhas.ConsultaPesquisaFalha@4973813a]" name="inicio" is-config="true" duration-ms="11280" started-at="2020-01-15T11:49:55 BRT" finished-at="2020-01-15T11:50:06 BRT">
+    <test name="Default test" duration-ms="13610" started-at="2020-01-15T22:31:49 BRT" finished-at="2020-01-15T22:32:02 BRT">
+      <class name="br.com.rsinet.hub_tdd.falhas.CadastroFalha">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.falhas.CadastroFalha@4973813a]" name="inicio" is-config="true" duration-ms="5030" started-at="2020-01-15T22:31:49 BRT" finished-at="2020-01-15T22:31:54 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="FAIL" signature="consultaPesquisa()[pri:0, instance:br.com.rsinet.hub_tdd.falhas.ConsultaPesquisaFalha@4973813a]" name="consultaPesquisa" duration-ms="2411" started-at="2020-01-15T11:50:06 BRT" finished-at="2020-01-15T11:50:08 BRT">
+        <test-method status="FAIL" signature="cadastro()[pri:0, instance:br.com.rsinet.hub_tdd.falhas.CadastroFalha@4973813a]" name="cadastro" duration-ms="7016" started-at="2020-01-15T22:31:54 BRT" finished-at="2020-01-15T22:32:01 BRT">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Nenhum resultado encontrado para fones! did not expect to find [false] but found [true]]]>
+              <![CDATA[A senha nao e a mesma! did not expect to find [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Nenhum resultado encontrado para fones! did not expect to find [false] but found [true]
+              <![CDATA[java.lang.AssertionError: A senha nao e a mesma! did not expect to find [false] but found [true]
 at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.failNotEquals(Assert.java:969)
 at org.testng.Assert.assertFalse(Assert.java:65)
-at br.com.rsinet.hub_tdd.falhas.ConsultaPesquisaFalha.consultaPesquisa(ConsultaPesquisaFalha.java:30)
+at br.com.rsinet.hub_tdd.falhas.CadastroFalha.cadastro(CadastroFalha.java:34)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
@@ -34,7 +34,7 @@ at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1257)
+at java.util.ArrayList.forEach(Unknown Source)
 at org.testng.TestRunner.privateRun(TestRunner.java:770)
 at org.testng.TestRunner.run(TestRunner.java:591)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
@@ -55,12 +55,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- consultaPesquisa -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.falhas.ConsultaPesquisaFalha@4973813a]" name="fim" is-config="true" duration-ms="902" started-at="2020-01-15T11:50:08 BRT" finished-at="2020-01-15T11:50:09 BRT">
+        </test-method> <!-- cadastro -->
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.falhas.CadastroFalha@4973813a]" name="fim" is-config="true" duration-ms="1518" started-at="2020-01-15T22:32:01 BRT" finished-at="2020-01-15T22:32:02 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-      </class> <!-- br.com.rsinet.hub_tdd.falhas.ConsultaPesquisaFalha -->
+      </class> <!-- br.com.rsinet.hub_tdd.falhas.CadastroFalha -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

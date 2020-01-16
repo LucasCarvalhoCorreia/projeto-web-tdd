@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.hub_tdd.falhas.ConsultaPesquisaFalha">
+      <class name="br.com.rsinet.hub_tdd.falhas.CadastroFalha">
         <methods>
           <include name="fim"/>
-          <include name="consultaPesquisa"/>
           <include name="inicio"/>
+          <include name="cadastro"/>
         </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.falhas.ConsultaPesquisaFalha -->
+      </class> <!-- br.com.rsinet.hub_tdd.falhas.CadastroFalha -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
