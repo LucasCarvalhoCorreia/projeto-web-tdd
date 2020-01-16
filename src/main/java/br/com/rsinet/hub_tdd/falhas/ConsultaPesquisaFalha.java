@@ -6,7 +6,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import br.com.rsinet.hub_tdd.modulos.ModuloHome;
 import br.com.rsinet.hub_tdd.pageObject.HomePage;
 import br.com.rsinet.hub_tdd.util.Constant;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
@@ -23,7 +22,7 @@ public class ConsultaPesquisaFalha extends Utilidades {
 
 	@Test
 	public void consultaPesquisa() throws Exception {
-		ModuloHome.barraDePesquisaErrado(driver);
+		HomePage.barraDePesquisaErrado(driver);
 
 		
 		String elemento = ExcelUtils.getCellData(1, Constant.txt_PesquisaBarraErro);

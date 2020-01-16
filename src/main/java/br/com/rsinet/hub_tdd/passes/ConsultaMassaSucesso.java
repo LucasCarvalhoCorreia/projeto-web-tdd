@@ -6,10 +6,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import br.com.rsinet.hub_tdd.modulos.ModuloHome;
-import br.com.rsinet.hub_tdd.modulos.ModuloPagamento;
-import br.com.rsinet.hub_tdd.modulos.ModuloPesquisa;
+import br.com.rsinet.hub_tdd.pageObject.HomePage;
 import br.com.rsinet.hub_tdd.pageObject.PagamentoPage;
+import br.com.rsinet.hub_tdd.pageObject.PesquisaPage;
 import br.com.rsinet.hub_tdd.util.Constant;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
 import br.com.rsinet.hub_tdd.util.Utilidades;
@@ -25,13 +24,13 @@ public class ConsultaMassaSucesso extends Utilidades {
 
 	@Test
 	public void consultaMassa() throws Exception {
-		ModuloHome.logaNaConta(driver);
+		HomePage.logaNaConta(driver);
 		
-		ModuloHome.produtoCategoria(driver);
+		HomePage.produtoCategoria(driver);
 
-		ModuloPesquisa.pesquisaCategoria(driver);
+		PesquisaPage.pesquisaCategoria(driver);
 		
-		ModuloPagamento.efetuaPagamento(driver);
+		PagamentoPage.efetuaPagamento(driver);
 
 		String condicao = ExcelUtils.getCellData(1, Constant.condicao_AssertMassa);
 		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertMassa);

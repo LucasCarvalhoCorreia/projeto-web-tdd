@@ -6,8 +6,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import br.com.rsinet.hub_tdd.modulos.ModuloHome;
-import br.com.rsinet.hub_tdd.modulos.ModuloPesquisa;
+import br.com.rsinet.hub_tdd.pageObject.HomePage;
 import br.com.rsinet.hub_tdd.pageObject.PesquisaPage;
 import br.com.rsinet.hub_tdd.util.Constant;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
@@ -24,9 +23,9 @@ public class ConsultaPesquisaSucesso extends Utilidades {
 
 	@Test
 	public void consultaPesquisa() throws Exception {
-		ModuloHome.barraDePesquisa(driver);
+		HomePage.barraDePesquisa(driver);
 		
-		ModuloPesquisa.pesquisaPorDescricao(driver);
+		PesquisaPage.pesquisaPorDescricao(driver);
 		
 		String condicao = ExcelUtils.getCellData(1, Constant.condicao_AssertBarra);
 		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertBarra);

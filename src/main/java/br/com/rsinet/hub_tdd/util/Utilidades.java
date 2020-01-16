@@ -31,6 +31,9 @@ public class Utilidades {
 	}
 
 	public static void tirarPrintsDeSucesso(String nomeDaImagem, WebDriver driver) throws Exception {
+		//Comando para esperar a tela carregar totalmente antes de tirar o print.
+		//Nenhum outro comando de wait utilizado fez efeito.
+		Thread.sleep(500);
 		TakesScreenshot scrShot = ((TakesScreenshot) driver);
 		File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
 		String imageFileDir = "C:\\Users\\lucas.correia\\git\\projeto-tdd\\target\\sucessos";
@@ -38,6 +41,9 @@ public class Utilidades {
 	}
 
 	public static void tirarPrintsDeFalha(String nomeDaImagem, WebDriver driver) throws Exception {
+		//Comando para esperar a tela carregar totalmente antes de tirar o print.
+		//Nenhum outro comando de wait utilizado fez efeito.
+		Thread.sleep(500);
 		TakesScreenshot scrShot = ((TakesScreenshot) driver);
 		File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
 		String imageFileDir = "C:\\Users\\lucas.correia\\git\\projeto-tdd\\target\\falhas";
