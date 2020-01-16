@@ -53,6 +53,8 @@ public class Constant {
 	public static final int condicao_AssertMassaErro = 5;
 	
 	public static final int msg_AssertMassaErro = 6;
+	
+	public static final int clica_Produto = 1;
 
 	// PesquisaBarra
 	public static final int txt_PesquisaBarra = 0;

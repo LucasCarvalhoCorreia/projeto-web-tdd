@@ -14,7 +14,7 @@ import br.com.rsinet.hub_tdd.util.Utilidades;
 
 public class CadastroSucesso extends Utilidades {
 
-	private static WebDriver driver;
+	WebDriver driver;
 	
 	@BeforeMethod
 	public void inicio() throws InterruptedException {
@@ -24,12 +24,13 @@ public class CadastroSucesso extends Utilidades {
 	@Test
 	public void cadastro() throws Exception {
 		HomePage.criarNovaConta(driver);
+		CadastroPage cadastroFalha = new CadastroPage();
 
-		CadastroPage.cadastrarUsuario(driver);
+		cadastroFalha.cadastrarUsuario(driver);
 		
 		String condicao = ExcelUtils.getCellData(1, Constant.txt_UserName);
 		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertCadastro);
-		String pass = CadastroPage.user_Logon.getText();
+		String pass = cadastroFalha.user_Logon.getText();
 		Assert.assertTrue(pass.equals(condicao), mensagem);
 	}
 

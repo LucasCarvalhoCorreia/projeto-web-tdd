@@ -13,41 +13,41 @@ import org.openqa.selenium.support.PageFactory;
 import br.com.rsinet.hub_tdd.util.Constant;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
 
-public class HomePage{
+public class HomePage {
 
-	static WebDriver driver;
+	WebDriver driver;
 
 	@FindBy(how = How.ID, using = "hrefUserIcon")
-	private static WebElement bt_UserIcon;
+	private WebElement bt_UserIcon;
 
 	@FindBy(how = How.XPATH, using = "/html/body/login-modal/div/div/div[3]/a[2]")
-	private static WebElement bt_CriarNovaConta;
+	private WebElement bt_CriarNovaConta;
 
 	@FindBy(how = How.NAME, using = "username")
-	private static WebElement txt_UserName;
+	private WebElement txt_UserName;
 
 	@FindBy(how = How.NAME, using = "password")
-	private static WebElement txt_Password;
+	private WebElement txt_Password;
 
 	@FindBy(how = How.ID, using = "sign_in_btnundefined")
-	private static WebElement bt_Logar;
+	private WebElement bt_Logar;
 
 	@FindBy(how = How.ID, using = "laptopsImg")
-	private static WebElement bt_LaptopImg;
+	private WebElement bt_LaptopImg;
 
 	@FindBy(how = How.ID, using = "menuSearch")
-	private static WebElement bt_Lupa;
+	private WebElement bt_Lupa;
 
 	@FindBy(how = How.ID, using = "autoComplete")
-	private static WebElement txt_Pesquisa;
+	private WebElement txt_Pesquisa;
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"search\"]/div/div/img")
-	private static WebElement bt_FechaSugestao;
+	private WebElement bt_FechaSugestao;
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"searchPage\"]/div[3]/div/label/span")
-	public static WebElement result_Produto;
+	public WebElement result_Produto;
 
-	public static void criarNovaConta(WebDriver driver) throws Exception {
+	public void criarNovaConta(WebDriver driver) throws Exception {
 		PageFactory.initElements(driver, HomePage.class);
 
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Cadastro");
@@ -59,7 +59,7 @@ public class HomePage{
 		bt_CriarNovaConta.sendKeys(Keys.ENTER);
 	}
 
-	public static void logaNaConta(WebDriver driver) throws Exception {
+	public void logaNaConta(WebDriver driver) throws Exception {
 		PageFactory.initElements(driver, HomePage.class);
 
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaCat");
@@ -75,7 +75,7 @@ public class HomePage{
 		bt_Logar.sendKeys(Keys.ENTER);
 	}
 
-	public static void produtoCategoria(WebDriver driver) throws Exception {
+	public void produtoCategoria(WebDriver driver) throws Exception {
 		PageFactory.initElements(driver, HomePage.class);
 
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -86,7 +86,7 @@ public class HomePage{
 		executor.executeScript("arguments[0].click();", elemento);
 	}
 
-	public static void barraDePesquisa(WebDriver driver) throws Exception {
+	public void barraDePesquisa(WebDriver driver) throws Exception {
 		PageFactory.initElements(driver, HomePage.class);
 
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaBarra");
@@ -104,7 +104,7 @@ public class HomePage{
 		bt_FechaSugestao.click();
 	}
 
-	public static void barraDePesquisaErrado(WebDriver driver) throws Exception {
+	public void barraDePesquisaErrado(WebDriver driver) throws Exception {
 		PageFactory.initElements(driver, HomePage.class);
 
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaBarra");

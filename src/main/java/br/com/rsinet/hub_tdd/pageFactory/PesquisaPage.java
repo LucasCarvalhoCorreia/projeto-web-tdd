@@ -11,12 +11,12 @@ import org.openqa.selenium.support.PageFactory;
 import br.com.rsinet.hub_tdd.util.Constant;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
 
-public class PesquisaPage{
+public class PesquisaPage {
 
 	static WebDriver driver;
 
 	@FindBy(how = How.LINK_TEXT, using = "HP Chromebook 14 G1(ES)")
-	private static WebElement bt_Produto;
+	private static WebElement clica_Produto;
 
 	@FindBy(how = How.NAME, using = "save_to_cart")
 	private static WebElement bt_SalvaProduto;
@@ -31,8 +31,7 @@ public class PesquisaPage{
 	private static WebElement id_Produto;
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"product\"]/td[2]/a/label[1]")
-	public
-	static WebElement qtd_Produto;
+	public static WebElement qtd_Produto;
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"Description\"]/h1")
 	public static WebElement desc_Produto;
@@ -42,7 +41,7 @@ public class PesquisaPage{
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		bt_Produto.click();
+		clica_Produto.click();
 
 		bt_SalvaProduto.click();
 
@@ -56,7 +55,7 @@ public class PesquisaPage{
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		bt_Produto.click();
+		clica_Produto.click();
 
 		txt_Quantidade.sendKeys(ExcelUtils.getCellData(1, Constant.txt_QuantidadeCat));
 
