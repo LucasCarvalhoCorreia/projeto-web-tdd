@@ -6,8 +6,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import br.com.rsinet.hub_tdd.pageObject.CadastroPage;
-import br.com.rsinet.hub_tdd.pageObject.HomePage;
+import br.com.rsinet.hub_tdd.pageFactory.CadastroPage;
+import br.com.rsinet.hub_tdd.pageFactory.HomePage;
 import br.com.rsinet.hub_tdd.util.Constant;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
 import br.com.rsinet.hub_tdd.util.Utilidades;
