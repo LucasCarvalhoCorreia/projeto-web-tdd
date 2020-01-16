@@ -64,7 +64,9 @@ public class ModuloHome {
 
 		HomePage.txt_Pesquisa.sendKeys(ExcelUtils.getCellData(1, Constant.txt_PesquisaBarra), Keys.ENTER);
 
-		Thread.sleep(2000);
+		//Coloquei este thread.sleep devido a uma animação em java script onde nenhum outro tipo de waiter não funcionou
+		//e estava atrapalhando a execução do código.
+		Thread.sleep(3000);
 		HomePage.bt_FechaSugestao.click();
 	}
 
@@ -79,6 +81,8 @@ public class ModuloHome {
 
 		HomePage.txt_Pesquisa.sendKeys(ExcelUtils.getCellData(1, Constant.txt_PesquisaBarraErro), Keys.ENTER);
 		
+		//Coloquei este thread.sleep devido a uma animação em java script onde nenhum outro tipo de waiter não funcionou
+		//e estava atrapalhando a execução do código.
 		Thread.sleep(1000);
 		HomePage.bt_FechaSugestao.click();
 	}

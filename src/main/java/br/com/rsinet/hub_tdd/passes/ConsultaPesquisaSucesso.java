@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 import br.com.rsinet.hub_tdd.modulos.ModuloHome;
 import br.com.rsinet.hub_tdd.modulos.ModuloPesquisa;
 import br.com.rsinet.hub_tdd.pageObject.PesquisaPage;
+import br.com.rsinet.hub_tdd.util.Constant;
+import br.com.rsinet.hub_tdd.util.ExcelUtils;
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
 public class ConsultaPesquisaSucesso extends Utilidades {
@@ -26,8 +28,10 @@ public class ConsultaPesquisaSucesso extends Utilidades {
 		
 		ModuloPesquisa.pesquisaPorDescricao(driver);
 		
+		String condicao = ExcelUtils.getCellData(1, Constant.condicao_AssertBarra);
+		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertBarra);
 		String elemento = PesquisaPage.desc_Produto.getText();
-		Assert.assertTrue(elemento.equals("HP ROAR MINI WIRELESS SPEAKER"), "Pesquisa efetuada com sucesso!");
+		Assert.assertTrue(elemento.equals(condicao), mensagem);
 	}
 
 	@AfterMethod

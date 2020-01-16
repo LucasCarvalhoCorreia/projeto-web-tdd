@@ -10,6 +10,8 @@ import org.testng.annotations.Test;
 import br.com.rsinet.hub_tdd.modulos.ModuloHome;
 import br.com.rsinet.hub_tdd.modulos.ModuloPesquisa;
 import br.com.rsinet.hub_tdd.pageObject.PesquisaPage;
+import br.com.rsinet.hub_tdd.util.Constant;
+import br.com.rsinet.hub_tdd.util.ExcelUtils;
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
 public class ConsultaMassaFalha extends Utilidades {
@@ -29,8 +31,10 @@ public class ConsultaMassaFalha extends Utilidades {
 
 		ModuloPesquisa.pesquisaCategoriaErrada(driver);
 		
+		String condicao = ExcelUtils.getCellData(1, Constant.condicao_AssertMassaErro);
+		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertMassaErro);
 		String aviso = PesquisaPage.qtd_Produto.getText();
-		Assert.assertFalse(aviso.equals("QTY: 10"), "Quantidade errada.");
+		Assert.assertFalse(aviso.equals(condicao), mensagem);
 	}
 
 	@AfterMethod

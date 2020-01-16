@@ -25,6 +25,7 @@ public class ConsultaPesquisaFalha extends Utilidades {
 	public void consultaPesquisa() throws Exception {
 		ModuloHome.barraDePesquisaErrado(driver);
 
+		
 		String elemento = ExcelUtils.getCellData(1, Constant.txt_PesquisaBarraErro);
 		String resposta = HomePage.result_Produto.getText();
 		Assert.assertFalse(resposta.equals("No results for " + "\"" + elemento + "\""), "Nenhum resultado encontrado para "+elemento+"!");

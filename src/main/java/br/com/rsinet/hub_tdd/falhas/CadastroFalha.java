@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 import br.com.rsinet.hub_tdd.modulos.ModuloCadastro;
 import br.com.rsinet.hub_tdd.modulos.ModuloHome;
 import br.com.rsinet.hub_tdd.pageObject.CadastroPage;
+import br.com.rsinet.hub_tdd.util.Constant;
+import br.com.rsinet.hub_tdd.util.ExcelUtils;
 import br.com.rsinet.hub_tdd.util.Utilidades;
 
 public class CadastroFalha extends Utilidades {
@@ -26,8 +28,10 @@ public class CadastroFalha extends Utilidades {
 		
 		ModuloCadastro.cadastrarUsuarioErrado(driver);
 
+		String condicao = ExcelUtils.getCellData(5, Constant.condicao_AssertCadastroErro);
+		String mensagem = ExcelUtils.getCellData(5, Constant.msg_AssertCadastroErro);
 		String pass = CadastroPage.not_Password.getText();
-		Assert.assertFalse(pass.equals("Passwords do not match"), "A senha não é a mesma!");
+		Assert.assertFalse(pass.equals(condicao), mensagem);
 	}
 
 	@AfterMethod

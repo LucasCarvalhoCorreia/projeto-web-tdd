@@ -52,6 +52,8 @@ public class ModuloCadastro {
 		
 		CadastroPage.bt_Registrar.click();
 		
+		//Coloquei este thread.sleep pois nenhum outro waiter funcionou
+		//e estava atrapalhando na execução do assert.
 		Thread.sleep(1000);
 	}
 

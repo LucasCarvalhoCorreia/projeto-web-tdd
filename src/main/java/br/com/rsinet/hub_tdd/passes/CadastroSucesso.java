@@ -28,9 +28,10 @@ public class CadastroSucesso extends Utilidades {
 
 		ModuloCadastro.cadastrarUsuario(driver);
 		
-		String usuario = ExcelUtils.getCellData(1, Constant.txt_UserName);
+		String condicao = ExcelUtils.getCellData(1, Constant.txt_UserName);
+		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertCadastro);
 		String pass = CadastroPage.user_Logon.getText();
-		Assert.assertTrue(pass.equals(usuario), "Cadastro efetuado com sucesso");
+		Assert.assertTrue(pass.equals(condicao), mensagem);
 	}
 
 	@AfterMethod
