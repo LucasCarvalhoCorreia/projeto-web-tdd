@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17260" started-at="2020-01-16T11:42:42 BRT" finished-at="2020-01-16T11:43:00 BRT">
+  <suite name="Default suite" duration-ms="16420" started-at="2020-01-17T14:27:13 BRT" finished-at="2020-01-17T14:27:30 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17260" started-at="2020-01-16T11:42:42 BRT" finished-at="2020-01-16T11:43:00 BRT">
-      <class name="br.com.rsinet.hub_tdd.passes.CadastroSucesso">
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.passes.CadastroSucesso@4973813a]" name="inicio" is-config="true" duration-ms="10947" started-at="2020-01-16T11:42:42 BRT" finished-at="2020-01-16T11:42:53 BRT">
+    <test name="Default test" duration-ms="16420" started-at="2020-01-17T14:27:13 BRT" finished-at="2020-01-17T14:27:30 BRT">
+      <class name="br.com.rsinet.hub_tdd.passes.ConsultaPesquisaSucesso">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.passes.ConsultaPesquisaSucesso@dc79225]" name="inicio" is-config="true" duration-ms="11915" started-at="2020-01-17T14:27:13 BRT" finished-at="2020-01-17T14:27:25 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="PASS" signature="cadastro()[pri:0, instance:br.com.rsinet.hub_tdd.passes.CadastroSucesso@4973813a]" name="cadastro" duration-ms="4586" started-at="2020-01-16T11:42:53 BRT" finished-at="2020-01-16T11:42:58 BRT">
+        <test-method status="PASS" signature="consultaPesquisa()[pri:0, instance:br.com.rsinet.hub_tdd.passes.ConsultaPesquisaSucesso@dc79225]" name="consultaPesquisa" duration-ms="2968" started-at="2020-01-17T14:27:25 BRT" finished-at="2020-01-17T14:27:28 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cadastro -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.passes.CadastroSucesso@4973813a]" name="fim" is-config="true" duration-ms="1700" started-at="2020-01-16T11:42:58 BRT" finished-at="2020-01-16T11:43:00 BRT">
+        </test-method> <!-- consultaPesquisa -->
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.passes.ConsultaPesquisaSucesso@dc79225]" name="fim" is-config="true" duration-ms="1484" started-at="2020-01-17T14:27:28 BRT" finished-at="2020-01-17T14:27:30 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-      </class> <!-- br.com.rsinet.hub_tdd.passes.CadastroSucesso -->
+      </class> <!-- br.com.rsinet.hub_tdd.passes.ConsultaPesquisaSucesso -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
