@@ -1,6 +1,9 @@
 package br.com.rsinet.hub_tdd.passes;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,26 +18,60 @@ import br.com.rsinet.hub_tdd.util.Utilidades;
 
 public class ConsultaMassaSucesso extends Utilidades {
 
-	private static WebDriver driver;
+	private WebDriver driver;
+	private HomePage homePage;
+	private PesquisaPage pesquisaPage;
+	private PagamentoPage pagamentoPage;
 	
 	@BeforeMethod
-	public void inicio() {
+	public void inicio() throws Exception {
 		driver = iniciaBrowser();
+		
+		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Pagamento");
+		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaCat");
+		homePage = PageFactory.initElements(driver, HomePage.class);
+		pesquisaPage = PageFactory.initElements(driver, PesquisaPage.class);
+		pagamentoPage = PageFactory.initElements(driver, PagamentoPage.class);
 	}
 
 	@Test
 	public void consultaMassa() throws Exception {
-		HomePage.logaNaConta(driver);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
-		HomePage.produtoCategoria(driver);
-
-		PesquisaPage.pesquisaCategoria(driver);
+		homePage.bt_UserIcon();
 		
-		PagamentoPage.efetuaPagamento(driver);
+		String txt_UserLogin = ExcelUtils.getCellData(1, Constant.txt_UserNameCat);
+		String txt_PasswordLogin = ExcelUtils.getCellData(1, Constant.txt_PasswordCat);
+		homePage.preencheLogin(txt_UserLogin, txt_PasswordLogin);
+		
+		homePage.bt_Logar();
+		
+		homePage.clicaProdutoCategoria(driver);
+		
+		pesquisaPage.clica_Produto();
+		
+		pesquisaPage.bt_SalvaProduto();
+		
+		pesquisaPage.bt_Comprar();
+		
+		pagamentoPage.bt_Next();
+		
+		String txt_UserNamePay = ExcelUtils.getCellData(1, Constant.txt_UserNamePay);
+		String txt_PasswordPay = ExcelUtils.getCellData(1, Constant.txt_PasswordPay);
+		
+		pagamentoPage.limpaUser();
+		pagamentoPage.limpaPass();
+		pagamentoPage.logaContaPay(txt_UserNamePay, txt_PasswordPay);
+		
+		pagamentoPage.check_SavePay();
+		
+		pagamentoPage.bt_Pay();
 
 		String condicao = ExcelUtils.getCellData(1, Constant.condicao_AssertMassa);
 		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertMassa);
-		String aviso = PagamentoPage.lbl_Pago.getText();
+		String aviso = pagamentoPage.lbl_Pago.getText();
+		System.out.println(aviso);
+		System.out.println(condicao);
 		Assert.assertTrue(aviso.equals(condicao), mensagem);
 	}
 

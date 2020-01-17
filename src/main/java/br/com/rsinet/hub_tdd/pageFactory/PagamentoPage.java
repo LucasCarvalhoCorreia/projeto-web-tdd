@@ -13,27 +13,53 @@ import br.com.rsinet.hub_tdd.util.ExcelUtils;
 
 public class PagamentoPage {
 
-	static WebDriver driver;
+	WebDriver driver;
 
 	@FindBy(how = How.ID, using = "next_btn")
-	private static WebElement bt_Next;
+	private WebElement bt_Next;
 
 	@FindBy(how = How.NAME, using = "safepay_username")
-	private static WebElement txt_UserNamePay;
+	private WebElement txt_UserNamePay;
 
 	@FindBy(how = How.NAME, using = "safepay_password")
-	private static WebElement txt_PasswordPay;
+	private WebElement txt_PasswordPay;
 
 	@FindBy(how = How.NAME, using = "save_safepay")
-	private static WebElement check_SavePay;
+	private WebElement check_SavePay;
 
 	@FindBy(how = How.ID, using = "pay_now_btn_SAFEPAY")
-	private static WebElement bt_Pay;
+	private WebElement bt_Pay;
 
 	@FindBy(how = How.XPATH, using = "/html/body/div[3]/section/article/h3")
-	public static WebElement lbl_Pago;
+	public WebElement lbl_Pago;
 
-	public static void efetuaPagamento(WebDriver driver) throws Exception {
+	
+	public void bt_Next() {
+		this.bt_Next.click();
+	}
+	
+	public void limpaUser() {
+		this.txt_UserNamePay.clear();
+	}
+	
+	public void limpaPass() {
+		this.txt_PasswordPay.clear();
+	}
+	
+	public void logaContaPay(String txt_UserNamePay, String txt_PasswordPay) {
+		this.txt_UserNamePay.sendKeys(txt_UserNamePay);
+		this.txt_PasswordPay.sendKeys(txt_PasswordPay);
+	}
+	
+	public void check_SavePay() {
+		this.check_SavePay.click();
+	}
+	
+	public void bt_Pay() {
+		this.bt_Pay.click();
+	}
+	
+	public void efetuaPagamento(WebDriver driver) throws Exception {
 		PageFactory.initElements(driver, PagamentoPage.class);
 
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Pagamento");
@@ -42,11 +68,11 @@ public class PagamentoPage {
 
 		bt_Next.click();
 
-		WebElement limpaUser = PagamentoPage.txt_UserNamePay;
+		WebElement limpaUser = txt_UserNamePay;
 		limpaUser.clear();
 		limpaUser.sendKeys(ExcelUtils.getCellData(1, Constant.txt_UserNamePay));
 
-		WebElement limpaPass = PagamentoPage.txt_PasswordPay;
+		WebElement limpaPass = txt_PasswordPay;
 		limpaPass.clear();
 		limpaPass.sendKeys(ExcelUtils.getCellData(1, Constant.txt_PasswordPay));
 

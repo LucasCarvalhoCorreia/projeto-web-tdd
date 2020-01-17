@@ -1,20 +1,10 @@
 package br.com.rsinet.hub_tdd.pageFactory;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-
-import br.com.rsinet.hub_tdd.util.Constant;
-import br.com.rsinet.hub_tdd.util.ExcelUtils;
 
 public class CadastroPage {
-
-	WebDriver driver;
 
 	@FindBy(how = How.NAME, using = "usernameRegisterPage")
 	private WebElement txt_UserName;
@@ -67,94 +57,46 @@ public class CadastroPage {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"menuUserLink\"]/span")
 	public WebElement user_Logon;
 
-	public void cadastrarUsuario(WebDriver driver) throws Exception {
-		PageFactory.initElements(driver, CadastroPage.class);
+	public void cadastrarUsuario(String txt_UserName, String txt_Email, String txt_Password, String txt_ConfirmPassword,
+			String txt_FirstName, String txt_LastName, String txt_Telefone, String combo_Pais, String txt_Cidade,
+			String txt_Endereco, String txt_Estado, String txt_Cep) {
 
-		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Cadastro");
-
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		txt_UserName.sendKeys(ExcelUtils.getCellData(1, Constant.txt_UserName));
-
-		txt_Email.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Email));
-
-		txt_Password.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Password));
-
-		txt_ConfirmPassword.sendKeys(ExcelUtils.getCellData(1, Constant.txt_ConfirmPassword));
-
-		txt_FirstName.sendKeys(ExcelUtils.getCellData(1, Constant.txt_FirstName));
-
-		txt_LastName.sendKeys(ExcelUtils.getCellData(1, Constant.txt_LastName));
-
-		txt_Telefone.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Telefone));
-
-		WebElement Country = combo_Pais;
-		Select comboBox = new Select(Country);
-		comboBox.selectByVisibleText(ExcelUtils.getCellData(1, Constant.combo_Pais));
-
-		txt_Cidade.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Cidade));
-
-		txt_Endereco.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Endereco));
-
-		txt_Estado.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Estado));
-
-		txt_Cep.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Cep));
-
-		check_Offers.click();
-
-		check_Agree.click();
-
-		bt_Registrar.click();
-
-		// Comadno utilizado para esperar a pagina carregar para pegar o texto do
-		// elemento.
-		// Nenhum outro comando waiter utilizado fez efeito nesta situação.
-		Thread.sleep(500);
+		this.txt_UserName.sendKeys(txt_UserName);
+		this.txt_Email.sendKeys(txt_Email);
+		this.txt_Password.sendKeys(txt_Password);
+		this.txt_ConfirmPassword.sendKeys(txt_ConfirmPassword);
+		this.txt_FirstName.sendKeys(txt_FirstName);
+		this.txt_LastName.sendKeys(txt_LastName);
+		this.txt_Telefone.sendKeys(txt_Telefone);
+		this.combo_Pais.sendKeys(combo_Pais);
+		this.txt_Cidade.sendKeys(txt_Cidade);
+		this.txt_Endereco.sendKeys(txt_Endereco);
+		this.txt_Estado.sendKeys(txt_Estado);
+		this.txt_Cep.sendKeys(txt_Cep);
 	}
 
-	public void cadastrarUsuarioErrado(WebDriver driver) throws Exception {
-		PageFactory.initElements(driver, CadastroPage.class);
-
-		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Cadastro");
-
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		txt_UserName.sendKeys(ExcelUtils.getCellData(1, Constant.txt_UserName));
-
-		txt_Email.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Email));
-
-		txt_Password.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Password));
-
-		txt_ConfirmPassword.sendKeys(ExcelUtils.getCellData(1, Constant.txt_ConfirmPassword));
-
-		txt_FirstName.sendKeys(ExcelUtils.getCellData(1, Constant.txt_FirstName));
-
-		txt_LastName.sendKeys(ExcelUtils.getCellData(1, Constant.txt_LastName));
-
-		txt_Telefone.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Telefone));
-
-		WebElement Country = combo_Pais;
-		Select comboBox = new Select(Country);
-		comboBox.selectByVisibleText(ExcelUtils.getCellData(1, Constant.combo_Pais));
-
-		txt_Cidade.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Cidade));
-
-		txt_Endereco.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Endereco));
-
-		txt_Estado.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Estado));
-
-		txt_Cep.sendKeys(ExcelUtils.getCellData(1, Constant.txt_Cep));
-
-		check_Offers.click();
-
-		check_Agree.click();
-
-		bt_Registrar.click();
-
-		WebElement senha = txt_ConfirmPassword;
-		senha.clear();
-		senha.sendKeys(ExcelUtils.getCellData(2, Constant.txt_ConfirmPassword));
-
-		txt_Password.click();
+	public void mudaSenha(String txt_ChangePassword) {
+		this.txt_ConfirmPassword.sendKeys(txt_ChangePassword);
 	}
+	
+	public void clear() {
+		this.txt_ConfirmPassword.clear();
+	}
+	
+	public void clicaPassword() {
+		this.txt_Password.click();
+	}
+	
+	public void check_Offers() {
+		check_Offers.click();
+	}
+	
+	public void check_Agree() {
+		this.check_Agree.click();
+	}
+	
+	public void bt_Registrar() {
+		this.bt_Registrar.click();
+	}
+	
 }

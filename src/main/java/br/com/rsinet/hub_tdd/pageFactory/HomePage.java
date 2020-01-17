@@ -15,8 +15,6 @@ import br.com.rsinet.hub_tdd.util.ExcelUtils;
 
 public class HomePage {
 
-	WebDriver driver;
-
 	@FindBy(how = How.ID, using = "hrefUserIcon")
 	private WebElement bt_UserIcon;
 
@@ -47,45 +45,41 @@ public class HomePage {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"searchPage\"]/div[3]/div/label/span")
 	public WebElement result_Produto;
 
-	public void criarNovaConta(WebDriver driver) throws Exception {
-		PageFactory.initElements(driver, HomePage.class);
-
-		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Cadastro");
-
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		bt_UserIcon.click();
-
-		bt_CriarNovaConta.sendKeys(Keys.ENTER);
+	public void bt_CriarNovaConta() {
+		this.bt_CriarNovaConta.sendKeys(Keys.ENTER);
 	}
 
-	public void logaNaConta(WebDriver driver) throws Exception {
-		PageFactory.initElements(driver, HomePage.class);
-
-		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaCat");
-
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		bt_UserIcon.click();
-
-		txt_UserName.sendKeys(ExcelUtils.getCellData(1, Constant.txt_UserNameCat));
-
-		txt_Password.sendKeys(ExcelUtils.getCellData(1, Constant.txt_PasswordCat));
-
-		bt_Logar.sendKeys(Keys.ENTER);
+	public void bt_UserIcon() {
+		this.bt_UserIcon.click();
 	}
 
-	public void produtoCategoria(WebDriver driver) throws Exception {
-		PageFactory.initElements(driver, HomePage.class);
+	public void preencheLogin(String txt_UserLogin, String txt_PasswordLogin) {
+		this.txt_UserName.sendKeys(txt_UserLogin);
+		this.txt_Password.sendKeys(txt_PasswordLogin);
+	}
 
+	public void bt_Logar() {
+		this.bt_Logar.sendKeys(Keys.ENTER);
+	}
+
+	public void clicaProdutoCategoria(WebDriver driver) throws Exception {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
-
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 		WebElement elemento = bt_LaptopImg;
 		executor.executeScript("arguments[0].click();", elemento);
 	}
 
+	public void bt_Lupa() {
+		bt_Lupa.click();
+	}
+	
+	public void pesquisar(String txt_Pesquisa) {
+		this.txt_Pesquisa.sendKeys(txt_Pesquisa + Keys.ENTER);
+	}
+	
+	public void bt_FechaSugestao() {
+		bt_FechaSugestao.click();
+	}
+	
 	public void barraDePesquisa(WebDriver driver) throws Exception {
 		PageFactory.initElements(driver, HomePage.class);
 
