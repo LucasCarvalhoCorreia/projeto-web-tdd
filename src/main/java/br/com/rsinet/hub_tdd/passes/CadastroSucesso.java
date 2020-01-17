@@ -13,9 +13,10 @@ import br.com.rsinet.hub_tdd.pageFactory.CadastroPage;
 import br.com.rsinet.hub_tdd.pageFactory.HomePage;
 import br.com.rsinet.hub_tdd.util.Constant;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
-import br.com.rsinet.hub_tdd.util.Utilidades;
+import br.com.rsinet.hub_tdd.util.Prints;
+import br.com.rsinet.hub_tdd.util.DriverFactory;
 
-public class CadastroSucesso extends Utilidades {
+public class CadastroSucesso extends DriverFactory {
 
 	private WebDriver driver;
 	private HomePage homePage;
@@ -23,7 +24,7 @@ public class CadastroSucesso extends Utilidades {
 	
 	@BeforeMethod
 	public void inicio() throws Exception {
-		driver = iniciaBrowser();
+		driver = DriverFactory.iniciaBrowser();
 		
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Cadastro");
 		homePage = PageFactory.initElements(driver, HomePage.class);
@@ -60,14 +61,15 @@ driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		String condicao = ExcelUtils.getCellData(1, Constant.txt_UserName);
 		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertCadastro);
+		
 		String pass = cadastroPage.user_Logon.getText();
 		Assert.assertTrue(pass.equals(condicao), mensagem);
 	}
 
 	@AfterMethod
 	public void fim() throws Exception {
-		tirarPrintsDeSucesso("CadastroSucesso ", driver);
-		driver = fechaBrowser();
+		Prints.tirarPrintsDeSucesso("CadastroSucesso ", driver);
+		DriverFactory.fechaBrowser(driver);
 	}
 
 }

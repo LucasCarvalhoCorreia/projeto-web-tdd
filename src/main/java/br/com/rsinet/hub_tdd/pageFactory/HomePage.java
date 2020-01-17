@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.rsinet.hub_tdd.util.Constant;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
@@ -69,15 +71,16 @@ public class HomePage {
 	}
 
 	public void bt_Lupa() {
-		bt_Lupa.click();
+		this.bt_Lupa.click();
 	}
 	
 	public void pesquisar(String txt_Pesquisa) {
 		this.txt_Pesquisa.sendKeys(txt_Pesquisa + Keys.ENTER);
 	}
 	
-	public void bt_FechaSugestao() {
-		bt_FechaSugestao.click();
+	public void bt_FechaSugestao(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(this.bt_FechaSugestao));
 	}
 	
 	public void barraDePesquisa(WebDriver driver) throws Exception {

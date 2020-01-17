@@ -14,9 +14,10 @@ import br.com.rsinet.hub_tdd.pageFactory.PagamentoPage;
 import br.com.rsinet.hub_tdd.pageFactory.PesquisaPage;
 import br.com.rsinet.hub_tdd.util.Constant;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
-import br.com.rsinet.hub_tdd.util.Utilidades;
+import br.com.rsinet.hub_tdd.util.Prints;
+import br.com.rsinet.hub_tdd.util.DriverFactory;
 
-public class ConsultaMassaSucesso extends Utilidades {
+public class ConsultaMassaSucesso extends DriverFactory {
 
 	private WebDriver driver;
 	private HomePage homePage;
@@ -25,7 +26,7 @@ public class ConsultaMassaSucesso extends Utilidades {
 	
 	@BeforeMethod
 	public void inicio() throws Exception {
-		driver = iniciaBrowser();
+		driver = DriverFactory.iniciaBrowser();
 		
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Pagamento");
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaCat");
@@ -77,8 +78,8 @@ public class ConsultaMassaSucesso extends Utilidades {
 
 	@AfterMethod
 	public void fim() throws Exception {
-		tirarPrintsDeSucesso("ConsultaMassaSucesso ", driver);
-		driver = fechaBrowser();
+		Prints.tirarPrintsDeSucesso("ConsultaMassaSucesso ", driver);
+		DriverFactory.fechaBrowser(driver);
 	}
 
 }

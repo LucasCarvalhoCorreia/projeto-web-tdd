@@ -11,17 +11,18 @@ import org.testng.annotations.Test;
 
 import br.com.rsinet.hub_tdd.pageFactory.HomePage;
 import br.com.rsinet.hub_tdd.util.Constant;
+import br.com.rsinet.hub_tdd.util.DriverFactory;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
-import br.com.rsinet.hub_tdd.util.Utilidades;
+import br.com.rsinet.hub_tdd.util.Prints;
 
-public class ConsultaPesquisaFalha extends Utilidades {
+public class ConsultaPesquisaFalha extends DriverFactory {
 
 	private WebDriver driver;
 	private HomePage homePage;
 
 	@BeforeMethod
 	public void inicio() throws Exception {
-		driver = iniciaBrowser();
+		driver = DriverFactory.iniciaBrowser();
 		
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaBarra");
 		homePage = PageFactory.initElements(driver, HomePage.class);
@@ -36,8 +37,7 @@ public class ConsultaPesquisaFalha extends Utilidades {
 		String txt_Pesquisa = (ExcelUtils.getCellData(1, Constant.txt_PesquisaBarraErro));
 		homePage.pesquisar(txt_Pesquisa);
 		
-		Thread.sleep(1000);
-		homePage.bt_FechaSugestao();
+		homePage.bt_FechaSugestao(driver);
 		
 		String elemento = ExcelUtils.getCellData(1, Constant.txt_PesquisaBarraErro);
 		String resposta = homePage.result_Produto.getText();
@@ -46,8 +46,8 @@ public class ConsultaPesquisaFalha extends Utilidades {
 
 	@AfterMethod
 	public void fim() throws Exception {
-		tirarPrintsDeFalha("ConsultaPesquisaFalha ", driver);
-		driver = fechaBrowser();
+		Prints.tirarPrintsDeFalha("ConsultaPesquisaFalha ", driver);
+		DriverFactory.fechaBrowser(driver);
 	}
 
 }

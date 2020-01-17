@@ -12,10 +12,11 @@ import org.testng.annotations.Test;
 import br.com.rsinet.hub_tdd.pageFactory.HomePage;
 import br.com.rsinet.hub_tdd.pageFactory.PesquisaPage;
 import br.com.rsinet.hub_tdd.util.Constant;
+import br.com.rsinet.hub_tdd.util.DriverFactory;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
-import br.com.rsinet.hub_tdd.util.Utilidades;
+import br.com.rsinet.hub_tdd.util.Prints;
 
-public class ConsultaPesquisaSucesso extends Utilidades {
+public class ConsultaPesquisaSucesso extends DriverFactory {
 
 	private WebDriver driver;
 	private HomePage homePage;
@@ -23,7 +24,7 @@ public class ConsultaPesquisaSucesso extends Utilidades {
 	
 	@BeforeMethod
 	public void inicio() throws Exception {
-		driver = iniciaBrowser();
+		driver = DriverFactory.iniciaBrowser();
 		
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaBarra");
 		homePage = PageFactory.initElements(driver, HomePage.class);
@@ -39,8 +40,7 @@ public class ConsultaPesquisaSucesso extends Utilidades {
 		String txt_Pesquisa = (ExcelUtils.getCellData(1, Constant.txt_PesquisaBarra));
 		homePage.pesquisar(txt_Pesquisa);
 		
-		Thread.sleep(1000);
-		homePage.bt_FechaSugestao();
+		homePage.bt_FechaSugestao(driver);
 		
 		pesquisaPage.id_Produto();
 
@@ -52,8 +52,8 @@ public class ConsultaPesquisaSucesso extends Utilidades {
 
 	@AfterMethod
 	public void fim() throws Exception {
-		tirarPrintsDeSucesso("ConsultaPesquisaSucesso ", driver);
-		driver = fechaBrowser();
+		Prints.tirarPrintsDeSucesso("ConsultaPesquisaSucesso ", driver);
+		DriverFactory.fechaBrowser(driver);
 	}
 
 }
