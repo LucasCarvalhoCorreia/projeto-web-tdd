@@ -41,8 +41,8 @@ public class ConsultaPorCategoriaSucesso extends DriverFactory {
 
 		homePage.bt_UserIcon();
 
-		String txt_UserLogin = ExcelUtils.getCellData(1, Constant.txt_UserNameCat);
-		String txt_PasswordLogin = ExcelUtils.getCellData(1, Constant.txt_PasswordCat);
+		String txt_UserLogin = ExcelUtils.getCellData(1, Constant.userNameCat);
+		String txt_PasswordLogin = ExcelUtils.getCellData(2, Constant.passwordCat);
 		homePage.preencheLogin(txt_UserLogin, txt_PasswordLogin);
 
 		homePage.bt_Logar();
@@ -57,8 +57,8 @@ public class ConsultaPorCategoriaSucesso extends DriverFactory {
 
 		pagamentoPage.bt_Next();
 
-		String txt_UserNamePay = ExcelUtils.getCellData(1, Constant.txt_UserNamePay);
-		String txt_PasswordPay = ExcelUtils.getCellData(1, Constant.txt_PasswordPay);
+		String txt_UserNamePay = ExcelUtils.getCellData(1, Constant.userNamePay);
+		String txt_PasswordPay = ExcelUtils.getCellData(2, Constant.passwordPay);
 
 		pagamentoPage.limpaUser();
 		pagamentoPage.limpaPass();
@@ -68,8 +68,8 @@ public class ConsultaPorCategoriaSucesso extends DriverFactory {
 
 		pagamentoPage.bt_Pay();
 
-		String condicao = ExcelUtils.getCellData(1, Constant.condicao_AssertMassa);
-		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertMassa);
+		String condicao = ExcelUtils.getCellData(2, Constant.condicaoAssertMassaSucesso);
+		String mensagem = ExcelUtils.getCellData(1, Constant.mensagemAssertMassaSucesso);
 		pagamentoPage.pega_Pago(driver);
 		String aviso = pagamentoPage.lbl_Pago.getText();
 		Assert.assertTrue(aviso.equals(condicao), mensagem);

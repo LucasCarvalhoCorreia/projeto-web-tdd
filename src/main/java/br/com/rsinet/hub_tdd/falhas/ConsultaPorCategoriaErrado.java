@@ -38,8 +38,8 @@ public class ConsultaPorCategoriaErrado extends DriverFactory {
 		
 		homePage.bt_UserIcon();
 		
-		String txt_UserLogin = ExcelUtils.getCellData(1, Constant.txt_UserNameCat);
-		String txt_PasswordLogin = ExcelUtils.getCellData(1, Constant.txt_PasswordCat);
+		String txt_UserLogin = ExcelUtils.getCellData(1, Constant.userNameCat);
+		String txt_PasswordLogin = ExcelUtils.getCellData(2, Constant.passwordCat);
 		homePage.preencheLogin(txt_UserLogin, txt_PasswordLogin);
 		
 		homePage.bt_Logar();
@@ -48,15 +48,15 @@ public class ConsultaPorCategoriaErrado extends DriverFactory {
 		
 		pesquisaPage.clica_Produto();
 		
-		String txt_Quantidade = ExcelUtils.getCellData(1, Constant.txt_QuantidadeCat);
+		String txt_Quantidade = ExcelUtils.getCellData(8, Constant.quantidadeCat);
 		pesquisaPage.quantidadeProduto(txt_Quantidade);
 		
 		pesquisaPage.bt_SalvaProduto();
 		
 		pesquisaPage.bt_Comprar();
 		
-		String condicao = ExcelUtils.getCellData(1, Constant.condicao_AssertMassaErro);
-		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertMassaErro);
+		String condicao = ExcelUtils.getCellData(4, Constant.condicaoAssertMassaErro);
+		String mensagem = ExcelUtils.getCellData(3, Constant.mensagemAssertMassaErro);
 		String aviso = pesquisaPage.qtd_Produto.getText();
 		System.out.println(aviso);
 		Assert.assertTrue(aviso.equals(condicao), mensagem);

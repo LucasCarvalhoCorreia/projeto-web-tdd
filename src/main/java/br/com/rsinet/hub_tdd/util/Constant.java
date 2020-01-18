@@ -10,64 +10,66 @@ public class Constant {
 	public static final String File_TestData = "MassaDeDados.xlsx";
 
 	// Cadastro
-	public static final int txt_UserName = 0;
+	public static final int userName = 1;
 
-	public static final int txt_Email = 1;
+	public static final int email = 1;
 
-	public static final int txt_Password = 2;
+	public static final int password = 1;
 
-	public static final int txt_ConfirmPassword = 3;
+	public static final int confirmPassword = 1;
 
-	public static final int txt_FirstName = 4;
+	public static final int confirmInvalidPassword = 1;
 
-	public static final int txt_LastName = 5;
+	public static final int firstName = 1;
 
-	public static final int txt_Telefone = 6;
+	public static final int lastName = 1;
 
-	public static final int combo_Pais = 7;
+	public static final int telefone = 1;
 
-	public static final int txt_Cidade = 8;
+	public static final int pais = 1;
 
-	public static final int txt_Endereco = 9;
+	public static final int cidade = 1;
 
-	public static final int txt_Estado = 10;
+	public static final int endereco = 1;
 
-	public static final int txt_Cep = 11;
+	public static final int estado = 1;
 
-	public static final int msg_AssertCadastro = 12;
+	public static final int cep = 1;
+
+	public static final int mensagemAssertCadastroSucesso = 5;
 	
-	public static final int condicao_AssertCadastroErro = 0;
+	public static final int condicaoAssertCadastroErro = 5;
 	
-	public static final int msg_AssertCadastroErro = 1;
+	public static final int mensagemAssertCadastroErro = 5;
 
 	// PesquisaCat
-	public static final int txt_UserNameCat = 0;
+	public static final int userNameCat = 1;
 
-	public static final int txt_PasswordCat = 1;
+	public static final int passwordCat = 1;
 
-	public static final int txt_QuantidadeCat = 2;
+	public static final int quantidadeCat = 1;
 
-	public static final int condicao_AssertMassa = 3;
+	public static final int condicaoAssertMassaSucesso = 4;
 
-	public static final int msg_AssertMassa = 4;
+	public static final int mensagemAssertMassaSucesso = 4;
 	
-	public static final int condicao_AssertMassaErro = 5;
+	public static final int condicaoAssertMassaErro = 4;
 	
-	public static final int msg_AssertMassaErro = 6;
+	public static final int mensagemAssertMassaErro = 4;
 	
-	public static final int clica_Produto = 1;
+	public static final int clicaProduto = 1;
 
 	// PesquisaBarra
-	public static final int txt_PesquisaBarra = 0;
+	public static final int pesquisaBarra = 1;
 
-	public static final int txt_PesquisaBarraErro = 1;
+	public static final int pesquisaBarraErro = 1;
 
-	public static final int condicao_AssertBarra = 2;
+	public static final int condicaoAssertBarra = 4;
 
-	public static final int msg_AssertBarra = 3;
+	public static final int mensagemAssertBarra = 4;
 
 	// Pagamento
-	public static final int txt_UserNamePay = 0;
+	public static final int userNamePay = 1;
 
-	public static final int txt_PasswordPay = 1;
+	public static final int passwordPay = 1;
 }

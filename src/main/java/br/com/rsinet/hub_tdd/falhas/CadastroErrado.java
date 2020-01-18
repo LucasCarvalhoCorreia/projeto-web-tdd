@@ -39,18 +39,18 @@ public class CadastroErrado extends DriverFactory {
 		
 		homePage.bt_CriarNovaConta();
 		
-		String txt_UserName = ExcelUtils.getCellData(1, Constant.txt_UserName);
-		String txt_Email = ExcelUtils.getCellData(1, Constant.txt_Email);
-		String txt_Password = ExcelUtils.getCellData(1, Constant.txt_Password);
-		String txt_ConfirmPassword = ExcelUtils.getCellData(2, Constant.txt_ConfirmPassword);
-		String txt_FirstName = ExcelUtils.getCellData(1, Constant.txt_FirstName);
-		String txt_LastName = ExcelUtils.getCellData(1, Constant.txt_LastName);
-		String txt_Telefone = ExcelUtils.getCellData(1, Constant.txt_Telefone);
-		String combo_Pais = ExcelUtils.getCellData(1, Constant.combo_Pais);
-		String txt_Cidade = ExcelUtils.getCellData(1, Constant.txt_Cidade);
-		String txt_Endereco = ExcelUtils.getCellData(1, Constant.txt_Endereco);
-		String txt_Estado = ExcelUtils.getCellData(1, Constant.txt_Estado);
-		String txt_Cep = ExcelUtils.getCellData(1, Constant.txt_Cep);
+		String txt_UserName = ExcelUtils.getCellData(1, Constant.userName);
+		String txt_Email = ExcelUtils.getCellData(2, Constant.email);
+		String txt_Password = ExcelUtils.getCellData(3, Constant.password);
+		String txt_ConfirmPassword = ExcelUtils.getCellData(4, Constant.confirmPassword);
+		String txt_FirstName = ExcelUtils.getCellData(6, Constant.firstName);
+		String txt_LastName = ExcelUtils.getCellData(7, Constant.lastName);
+		String txt_Telefone = ExcelUtils.getCellData(8, Constant.telefone);
+		String combo_Pais = ExcelUtils.getCellData(9, Constant.pais);
+		String txt_Cidade = ExcelUtils.getCellData(10, Constant.cidade);
+		String txt_Endereco = ExcelUtils.getCellData(11, Constant.endereco);
+		String txt_Estado = ExcelUtils.getCellData(12, Constant.estado);
+		String txt_Cep = ExcelUtils.getCellData(13, Constant.cep);
 		
 		cadastroPage.cadastrarUsuario(txt_UserName, txt_Email, txt_Password, txt_ConfirmPassword, txt_FirstName, txt_LastName, 
 				txt_Telefone, combo_Pais, txt_Cidade, txt_Endereco, txt_Estado, txt_Cep);
@@ -59,14 +59,14 @@ public class CadastroErrado extends DriverFactory {
 		cadastroPage.check_Agree();
 		cadastroPage.bt_Registrar();
 		
-		String txt_ChangePassword = ExcelUtils.getCellData(2, Constant.txt_ConfirmPassword);
+		String txt_ChangePassword = ExcelUtils.getCellData(5, Constant.confirmInvalidPassword);
 		cadastroPage.clear();
 		cadastroPage.mudaSenha(txt_ChangePassword);
 		
 		cadastroPage.clicaPassword();
 
-		String condicao = ExcelUtils.getCellData(5, Constant.condicao_AssertCadastroErro);
-		String mensagem = ExcelUtils.getCellData(5, Constant.msg_AssertCadastroErro);
+		String condicao = ExcelUtils.getCellData(1, Constant.condicaoAssertCadastroErro);
+		String mensagem = ExcelUtils.getCellData(2, Constant.mensagemAssertCadastroErro);
 		String pass = cadastroPage.not_Password.getText();
 		Assert.assertTrue(pass.equals(condicao), mensagem);
 	}

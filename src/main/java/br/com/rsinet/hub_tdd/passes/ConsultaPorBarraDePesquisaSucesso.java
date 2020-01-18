@@ -37,15 +37,15 @@ public class ConsultaPorBarraDePesquisaSucesso extends DriverFactory {
 
 		homePage.bt_Lupa();
 
-		String txt_Pesquisa = (ExcelUtils.getCellData(1, Constant.txt_PesquisaBarra));
+		String txt_Pesquisa = (ExcelUtils.getCellData(1, Constant.pesquisaBarra));
 		homePage.pesquisar(txt_Pesquisa);
 
 		homePage.bt_FechaSugestao(driver);
 
 		pesquisaPage.id_Produto();
 
-		String condicao = ExcelUtils.getCellData(1, Constant.condicao_AssertBarra);
-		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertBarra);
+		String condicao = ExcelUtils.getCellData(1, Constant.condicaoAssertBarra);
+		String mensagem = ExcelUtils.getCellData(2, Constant.mensagemAssertBarra);
 		String elemento = pesquisaPage.desc_Produto.getText();
 		Assert.assertTrue(elemento.equals(condicao), mensagem);
 	}
