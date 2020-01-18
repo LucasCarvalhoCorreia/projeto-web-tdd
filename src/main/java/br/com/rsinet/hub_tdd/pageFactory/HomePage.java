@@ -1,19 +1,13 @@
 package br.com.rsinet.hub_tdd.pageFactory;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import br.com.rsinet.hub_tdd.util.Constant;
-import br.com.rsinet.hub_tdd.util.ExcelUtils;
 
 public class HomePage {
 
@@ -64,7 +58,7 @@ public class HomePage {
 		this.bt_Logar.sendKeys(Keys.ENTER);
 	}
 
-	public void clicaProdutoCategoria(WebDriver driver) throws Exception {
+	public void clicaProdutoCategoria(WebDriver driver) {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		WebElement elemento = bt_LaptopImg;
 		executor.executeScript("arguments[0].click();", elemento);
@@ -82,40 +76,5 @@ public class HomePage {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(this.bt_FechaSugestao));
 	}
-	
-	public void barraDePesquisa(WebDriver driver) throws Exception {
-		PageFactory.initElements(driver, HomePage.class);
 
-		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaBarra");
-
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		bt_Lupa.click();
-
-		txt_Pesquisa.sendKeys(ExcelUtils.getCellData(1, Constant.txt_PesquisaBarra), Keys.ENTER);
-
-		// Coloquei este thread.sleep devido a uma animação em java script onde nenhum
-		// outro tipo de waiter funcionou
-		// e estava atrapalhando a execução do código.
-		Thread.sleep(3000);
-		bt_FechaSugestao.click();
-	}
-
-	public void barraDePesquisaErrado(WebDriver driver) throws Exception {
-		PageFactory.initElements(driver, HomePage.class);
-
-		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaBarra");
-
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		bt_Lupa.click();
-
-		txt_Pesquisa.sendKeys(ExcelUtils.getCellData(1, Constant.txt_PesquisaBarraErro), Keys.ENTER);
-
-		// Coloquei este thread.sleep devido a uma animação em java script onde nenhum
-		// outro tipo de waiter funcionou
-		// e estava atrapalhando a execução do código.
-		Thread.sleep(1000);
-		bt_FechaSugestao.click();
-	}
 }

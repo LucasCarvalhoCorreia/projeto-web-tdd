@@ -1,8 +1,11 @@
 package br.com.rsinet.hub_tdd.pageFactory;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CadastroPage {
 
@@ -97,6 +100,11 @@ public class CadastroPage {
 	
 	public void bt_Registrar() {
 		this.bt_Registrar.click();
+	}
+	
+	public void pega_UserLogon(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(this.user_Logon));
 	}
 	
 }

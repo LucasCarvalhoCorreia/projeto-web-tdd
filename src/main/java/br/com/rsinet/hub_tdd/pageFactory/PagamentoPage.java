@@ -1,15 +1,11 @@
 package br.com.rsinet.hub_tdd.pageFactory;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-
-import br.com.rsinet.hub_tdd.util.Constant;
-import br.com.rsinet.hub_tdd.util.ExcelUtils;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PagamentoPage {
 
@@ -30,7 +26,7 @@ public class PagamentoPage {
 	@FindBy(how = How.ID, using = "pay_now_btn_SAFEPAY")
 	private WebElement bt_Pay;
 
-	@FindBy(how = How.XPATH, using = "/html/body/div[3]/section/article/h3")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"orderPaymentSuccess\"]/h2/span")
 	public WebElement lbl_Pago;
 
 	
@@ -59,27 +55,8 @@ public class PagamentoPage {
 		this.bt_Pay.click();
 	}
 	
-	public void efetuaPagamento(WebDriver driver) throws Exception {
-		PageFactory.initElements(driver, PagamentoPage.class);
-
-		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Pagamento");
-
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		bt_Next.click();
-
-		WebElement limpaUser = txt_UserNamePay;
-		limpaUser.clear();
-		limpaUser.sendKeys(ExcelUtils.getCellData(1, Constant.txt_UserNamePay));
-
-		WebElement limpaPass = txt_PasswordPay;
-		limpaPass.clear();
-		limpaPass.sendKeys(ExcelUtils.getCellData(1, Constant.txt_PasswordPay));
-
-		check_SavePay.click();
-
-		bt_Pay.click();
-
-		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaCat");
+	public void pega_Pago(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(this.lbl_Pago));
 	}
 }

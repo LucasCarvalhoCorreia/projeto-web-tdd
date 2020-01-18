@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_tdd.passes;
+package br.com.rsinet.hub_tdd.falhas;
 
 import java.util.concurrent.TimeUnit;
 
@@ -10,49 +10,41 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import br.com.rsinet.hub_tdd.pageFactory.HomePage;
-import br.com.rsinet.hub_tdd.pageFactory.PesquisaPage;
 import br.com.rsinet.hub_tdd.util.Constant;
 import br.com.rsinet.hub_tdd.util.DriverFactory;
 import br.com.rsinet.hub_tdd.util.ExcelUtils;
 import br.com.rsinet.hub_tdd.util.Prints;
 
-public class ConsultaPesquisaSucesso extends DriverFactory {
+public class ConsultaPorBarraDePesquisaErrado extends DriverFactory {
 
 	private WebDriver driver;
 	private HomePage homePage;
-	private PesquisaPage pesquisaPage;
-	
+
 	@BeforeMethod
 	public void inicio() throws Exception {
 		driver = DriverFactory.iniciaBrowser();
 		
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaBarra");
 		homePage = PageFactory.initElements(driver, HomePage.class);
-		pesquisaPage = PageFactory.initElements(driver, PesquisaPage.class);
 	}
 
 	@Test
-	public void consultaPesquisa() throws Exception {
+	public void consultaPorBarraDePesquisaComProdutoInexistenteNoBanco() throws Exception {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		homePage.bt_Lupa();
 		
-		String txt_Pesquisa = (ExcelUtils.getCellData(1, Constant.txt_PesquisaBarra));
+		String txt_Pesquisa = (ExcelUtils.getCellData(1, Constant.txt_PesquisaBarraErro));
 		homePage.pesquisar(txt_Pesquisa);
 		
-		homePage.bt_FechaSugestao(driver);
-		
-		pesquisaPage.id_Produto();
-
-		String condicao = ExcelUtils.getCellData(1, Constant.condicao_AssertBarra);
-		String mensagem = ExcelUtils.getCellData(1, Constant.msg_AssertBarra);
-		String elemento = pesquisaPage.desc_Produto.getText();
-		Assert.assertTrue(elemento.equals(condicao), mensagem);
+		String elemento = ExcelUtils.getCellData(1, Constant.txt_PesquisaBarraErro);
+		String resposta = homePage.result_Produto.getText();
+		Assert.assertTrue(resposta.equals("No results for " + "\"" + elemento + "\""), "Nenhum resultado encontrado para "+elemento+"!");
 	}
 
 	@AfterMethod
 	public void fim() throws Exception {
-		Prints.tirarPrintsDeSucesso("ConsultaPesquisaSucesso ", driver);
+		Prints.tirarPrintsDeFalha("ConsultaPorBarraDePesquisaErrado ", driver);
 		DriverFactory.fechaBrowser(driver);
 	}
 

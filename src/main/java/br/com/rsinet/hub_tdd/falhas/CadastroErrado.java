@@ -16,7 +16,7 @@ import br.com.rsinet.hub_tdd.util.ExcelUtils;
 import br.com.rsinet.hub_tdd.util.Prints;
 import br.com.rsinet.hub_tdd.util.DriverFactory;
 
-public class CadastroFalha extends DriverFactory {
+public class CadastroErrado extends DriverFactory {
 
 	private WebDriver driver;
 	private HomePage homePage;
@@ -32,7 +32,7 @@ public class CadastroFalha extends DriverFactory {
 	}
 
 	@Test
-	public void cadastro() throws Exception {
+	public void cadastroComPreenchimentoDeDadosIncorretos() throws Exception {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		homePage.bt_UserIcon();
@@ -73,7 +73,7 @@ public class CadastroFalha extends DriverFactory {
 
 	@AfterMethod
 	public void fim() throws Exception {
-		Prints.tirarPrintsDeFalha("CadastroFalha ", driver);
+		Prints.tirarPrintsDeFalha("CadastroErrado ", driver);
 		DriverFactory.fechaBrowser(driver);
 	}
 
