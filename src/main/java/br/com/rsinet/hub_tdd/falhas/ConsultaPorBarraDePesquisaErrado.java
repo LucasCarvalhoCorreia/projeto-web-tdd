@@ -34,10 +34,10 @@ public class ConsultaPorBarraDePesquisaErrado extends DriverFactory {
 		
 		homePage.bt_Lupa();
 		
-		String txt_Pesquisa = (ExcelUtils.getCellData(4, Constant.pesquisaBarraErro));
+		String txt_Pesquisa = (ExcelUtils.getCellData(5, Constant.pesquisaBarraErro));
 		homePage.pesquisar(txt_Pesquisa);
 		
-		String elemento = ExcelUtils.getCellData(4, Constant.pesquisaBarraErro);
+		String elemento = ExcelUtils.getCellData(5, Constant.pesquisaBarraErro);
 		String resposta = homePage.result_Produto.getText();
 		Assert.assertTrue(resposta.equals("No results for " + "\"" + elemento + "\""), "Nenhum resultado encontrado para "+elemento+"!");
 	}
