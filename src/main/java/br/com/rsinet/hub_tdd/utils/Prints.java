@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_tdd.util;
+package br.com.rsinet.hub_tdd.utils;
 
 import java.io.File;
 import java.text.SimpleDateFormat;

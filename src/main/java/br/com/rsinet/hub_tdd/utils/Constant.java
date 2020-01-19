@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_tdd.util;
+package br.com.rsinet.hub_tdd.utils;
 
 public class Constant {
 

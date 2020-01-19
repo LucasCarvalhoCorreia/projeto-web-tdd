@@ -1,4 +1,4 @@
-package br.com.rsinet.hub_tdd.passes;
+package br.com.rsinet.hub_tdd.testes.sucessos;
 
 import java.util.concurrent.TimeUnit;
 
@@ -11,10 +11,10 @@ import org.testng.annotations.Test;
 
 import br.com.rsinet.hub_tdd.pageFactory.CadastroPage;
 import br.com.rsinet.hub_tdd.pageFactory.HomePage;
-import br.com.rsinet.hub_tdd.util.Constant;
-import br.com.rsinet.hub_tdd.util.DriverFactory;
-import br.com.rsinet.hub_tdd.util.ExcelUtils;
-import br.com.rsinet.hub_tdd.util.Prints;
+import br.com.rsinet.hub_tdd.utils.Constant;
+import br.com.rsinet.hub_tdd.utils.DriverFactory;
+import br.com.rsinet.hub_tdd.utils.ExcelUtils;
+import br.com.rsinet.hub_tdd.utils.Prints;
 
 public class CadastroSucesso extends DriverFactory {
 
