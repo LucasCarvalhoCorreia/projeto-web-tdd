@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14761" started-at="2020-01-18T20:23:49 BRT" finished-at="2020-01-18T20:24:03 BRT">
+  <suite name="Default suite" duration-ms="15627" started-at="2020-01-18T21:35:33 BRT" finished-at="2020-01-18T21:35:49 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14761" started-at="2020-01-18T20:23:49 BRT" finished-at="2020-01-18T20:24:03 BRT">
-      <class name="br.com.rsinet.hub_tdd.passes.ConsultaPorBarraDePesquisaSucesso">
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.passes.ConsultaPorBarraDePesquisaSucesso@6c008c24]" name="inicio" is-config="true" duration-ms="6376" started-at="2020-01-18T20:23:49 BRT" finished-at="2020-01-18T20:23:55 BRT">
+    <test name="Default test" duration-ms="15627" started-at="2020-01-18T21:35:33 BRT" finished-at="2020-01-18T21:35:49 BRT">
+      <class name="br.com.rsinet.hub_tdd.falhas.ConsultaPorCategoriaErrado">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.falhas.ConsultaPorCategoriaErrado@dc79225]" name="inicio" is-config="true" duration-ms="7008" started-at="2020-01-18T21:35:33 BRT" finished-at="2020-01-18T21:35:40 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="PASS" signature="consultaProdutoPorBarraDePesquisa()[pri:0, instance:br.com.rsinet.hub_tdd.passes.ConsultaPorBarraDePesquisaSucesso@6c008c24]" name="consultaProdutoPorBarraDePesquisa" duration-ms="4213" started-at="2020-01-18T20:23:55 BRT" finished-at="2020-01-18T20:23:59 BRT">
+        <test-method status="PASS" signature="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho()[pri:0, instance:br.com.rsinet.hub_tdd.falhas.ConsultaPorCategoriaErrado@dc79225]" name="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho" duration-ms="7419" started-at="2020-01-18T21:35:40 BRT" finished-at="2020-01-18T21:35:48 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- consultaProdutoPorBarraDePesquisa -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.passes.ConsultaPorBarraDePesquisaSucesso@6c008c24]" name="fim" is-config="true" duration-ms="4078" started-at="2020-01-18T20:23:59 BRT" finished-at="2020-01-18T20:24:03 BRT">
+        </test-method> <!-- consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho -->
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.falhas.ConsultaPorCategoriaErrado@dc79225]" name="fim" is-config="true" duration-ms="1123" started-at="2020-01-18T21:35:48 BRT" finished-at="2020-01-18T21:35:49 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-      </class> <!-- br.com.rsinet.hub_tdd.passes.ConsultaPorBarraDePesquisaSucesso -->
+      </class> <!-- br.com.rsinet.hub_tdd.falhas.ConsultaPorCategoriaErrado -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
