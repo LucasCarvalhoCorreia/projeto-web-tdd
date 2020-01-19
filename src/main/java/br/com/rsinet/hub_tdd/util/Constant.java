@@ -61,6 +61,8 @@ public class Constant {
 
 	// PesquisaBarra
 	public static final int pesquisaBarra = 1;
+	
+	public static final int escolheProduto = 1;
 
 	public static final int pesquisaBarraErro = 1;
 

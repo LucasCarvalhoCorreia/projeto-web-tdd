@@ -49,7 +49,8 @@ public class ConsultaPorCategoriaSucesso extends DriverFactory {
 
 		homePage.clicaProdutoCategoria(driver);
 
-		pesquisaPage.clica_Produto();
+		String produto = ExcelUtils.getCellData(5, Constant.clicaProduto);
+		pesquisaPage.pesquisaProdutoCategoria(driver, produto).click();
 
 		pesquisaPage.bt_SalvaProduto();
 

@@ -42,7 +42,8 @@ public class ConsultaPorBarraDePesquisaSucesso extends DriverFactory {
 
 		homePage.bt_FechaSugestao(driver);
 
-		pesquisaPage.id_Produto();
+		String produto = ExcelUtils.getCellData(2, Constant.escolheProduto);
+		pesquisaPage.pesquisaProdutoBarra(driver, produto).click();
 
 		String condicao = ExcelUtils.getCellData(1, Constant.condicaoAssertBarra);
 		String mensagem = ExcelUtils.getCellData(2, Constant.mensagemAssertBarra);
