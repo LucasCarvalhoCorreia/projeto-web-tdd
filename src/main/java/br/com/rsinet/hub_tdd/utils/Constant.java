@@ -11,7 +11,7 @@ public class Constant {
 	 * Comando responsavel por identificar o endereço do arquivo para manipulação da
 	 * massa de dados.
 	 */
-	public static final String Path_TestData = "C:\\Users\\lucas.correia\\git\\projeto-tdd\\src\\main\\java\\br\\com\\rsinet\\hub_tdd\\testData\\";
+	public static final String Path_TestData = "C:\\Users\\lucas.correia\\git\\jee\\projeto-tdd\\src\\main\\java\\br\\com\\rsinet\\hub_tdd\\testData\\";
 	/*
 	 * Comando responsavel por identificar o nome do arquivo de manipulação de massa
 	 * de dados.

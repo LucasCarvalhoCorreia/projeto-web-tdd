@@ -96,8 +96,8 @@ public class HomePage {
 	 * Método tuilizado para clicar no botão de fechar a janela de sugestões de
 	 * pesquisa da barra de pesquisa.
 	 */
-	public void bt_FechaSugestao(WebDriver driver) {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+	public void bt_FechaSugestao(WebDriver driver) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.elementToBeClickable(this.bt_FechaSugestao));
 	}
 
