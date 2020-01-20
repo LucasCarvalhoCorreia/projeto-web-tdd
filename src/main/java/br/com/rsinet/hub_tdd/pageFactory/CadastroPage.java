@@ -9,6 +9,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CadastroPage {
 
+	/* Area onde são encontrados os elementos na pagina de cadastro. */
+
+	/*
+	 * Encontra os Editores de Texto, Botões, ComboBox e CheckBox para o campo
+	 * correspondente ao nome da variável e atribui na mesma.
+	 */
+	/* Utilizado para preencher as informações de cadastro. */
 	@FindBy(how = How.NAME, using = "usernameRegisterPage")
 	private WebElement txt_UserName;
 
@@ -54,12 +61,18 @@ public class CadastroPage {
 	@FindBy(how = How.ID, using = "register_btnundefined")
 	private WebElement bt_Registrar;
 
+	/* Elemento utilizado para receber o status da confirmação da senha. */
 	@FindBy(how = How.XPATH, using = "//*[@id=\"formCover\"]/div[1]/div[2]/sec-view[2]/div/label")
 	public WebElement not_Password;
 
+	/* Elemento utilizado para receber o nome de usuário logado. */
 	@FindBy(how = How.XPATH, using = "//*[@id=\"menuUserLink\"]/span")
 	public WebElement user_Logon;
 
+	/*
+	 * Método utilizado para receber as informações da massa de dados e preencher o
+	 * formulario.
+	 */
 	public void cadastrarUsuario(String txt_UserName, String txt_Email, String txt_Password, String txt_ConfirmPassword,
 			String txt_FirstName, String txt_LastName, String txt_Telefone, String combo_Pais, String txt_Cidade,
 			String txt_Endereco, String txt_Estado, String txt_Cep) {
@@ -78,33 +91,46 @@ public class CadastroPage {
 		this.txt_Cep.sendKeys(txt_Cep);
 	}
 
+	/* Método utilizado para preencher o campo de confirmação de senha. */
 	public void mudaSenha(String txt_ChangePassword) {
 		this.txt_ConfirmPassword.sendKeys(txt_ChangePassword);
 	}
-	
+
+	/* Método utilizado para limpar o campo de confirmação de senha. */
 	public void clear() {
 		this.txt_ConfirmPassword.clear();
 	}
-	
+
+	/*
+	 * Método utilizado para clicar no campo senha para que a notificação de erro na
+	 * confirmação de senha apareça.
+	 */
 	public void clicaPassword() {
 		this.txt_Password.click();
 	}
-	
+
+	/* Método utilizado para clicar no check box de ofertas. */
 	public void check_Offers() {
-		check_Offers.click();
+		this.check_Offers.click();
 	}
-	
+
+	/* Método utilizado para clicar no check box de termos de serviço. */
 	public void check_Agree() {
 		this.check_Agree.click();
 	}
-	
+
+	/* Método utilizado para clicar no botão de registrar. */
 	public void bt_Registrar() {
 		this.bt_Registrar.click();
 	}
-	
+
+	/*
+	 * Método utilizado para aguardar que o elemento que aparece o nome de usuario
+	 * apareça para coletar a informação.
+	 */
 	public void pega_UserLogon(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(this.user_Logon));
 	}
-	
+
 }

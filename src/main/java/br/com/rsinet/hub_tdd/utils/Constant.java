@@ -2,12 +2,26 @@ package br.com.rsinet.hub_tdd.utils;
 
 public class Constant {
 
+	/*
+	 * Comando responsavel por identificar a url do site que serão aplicados a massa
+	 * de dados.
+	 */
 	public static final String URL = "http://advantageonlineshopping.com/#/";
-
-    public static final String Path_TestData = "C:\\Users\\lucas.correia\\git\\projeto-tdd\\src\\main\\java\\br\\com\\rsinet\\hub_tdd\\testData\\";
-
+	/*
+	 * Comando responsavel por identificar o endereço do arquivo para manipulação da
+	 * massa de dados.
+	 */
+	public static final String Path_TestData = "C:\\Users\\lucas.correia\\git\\projeto-tdd\\src\\main\\java\\br\\com\\rsinet\\hub_tdd\\testData\\";
+	/*
+	 * Comando responsavel por identificar o nome do arquivo de manipulação de massa
+	 * de dados.
+	 */
 	public static final String File_TestData = "MassaDeDados.xlsx";
 
+	/*
+	 * Área onde são identificados as celulas de dentro do arquivo de massa de dados
+	 * através da coluna e armazenados nas variaveis.
+	 */
 	// Cadastro
 	public static final int userName = 1;
 
@@ -36,9 +50,9 @@ public class Constant {
 	public static final int cep = 1;
 
 	public static final int mensagemAssertCadastroSucesso = 5;
-	
+
 	public static final int condicaoAssertCadastroErro = 5;
-	
+
 	public static final int mensagemAssertCadastroErro = 5;
 
 	// PesquisaCat
@@ -51,16 +65,16 @@ public class Constant {
 	public static final int condicaoAssertMassaSucesso = 4;
 
 	public static final int mensagemAssertMassaSucesso = 4;
-	
+
 	public static final int condicaoAssertMassaErro = 4;
-	
+
 	public static final int mensagemAssertMassaErro = 4;
-	
+
 	public static final int clicaProduto = 1;
 
 	// PesquisaBarra
 	public static final int pesquisaBarra = 1;
-	
+
 	public static final int escolheProduto = 1;
 
 	public static final int pesquisaBarraErro = 1;

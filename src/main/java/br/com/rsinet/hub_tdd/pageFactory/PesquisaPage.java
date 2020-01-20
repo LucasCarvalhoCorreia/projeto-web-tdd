@@ -8,8 +8,16 @@ import org.openqa.selenium.support.How;
 
 public class PesquisaPage {
 
-	public WebDriver driver;
+	/* Area onde são encontrados os elementos na pagina de pesquisa. */
 
+	/*
+	 * Encontra os Editores de Texto, Botões, ComboBox e CheckBox para o campo
+	 * correspondente ao nome da variável e atribui na mesma.
+	 */
+	/*
+	 * Utilizado para preencher as informações de pesquisa e inicio de compra de
+	 * produto.
+	 */
 	@FindBy(how = How.NAME, using = "save_to_cart")
 	private WebElement bt_SalvaProduto;
 
@@ -25,24 +33,26 @@ public class PesquisaPage {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"Description\"]/h1")
 	public WebElement desc_Produto;
 
-	public WebElement pesquisaProdutoCategoria(WebDriver driver, String produto) {
+	/* Método utilizado para selecionar o produto desejado na tela de pesquisa. */
+	public WebElement selecionaProduto(WebDriver driver, String produto) {
 		WebElement element = driver.findElement(By.linkText(produto));
 		return element;
 	}
-	
-	public WebElement pesquisaProdutoBarra(WebDriver driver, String produto) {
-		WebElement element = driver.findElement(By.linkText(produto));
-		return element;
-	}
-	
+
+	/* Método utilizado para clicar no botão de adicionar o produto ao carrinho. */
 	public void bt_SalvaProduto() {
 		this.bt_SalvaProduto.click();
 	}
-	
+
+	/* Método utilizado para clicar no botão de iniciar a compra do produto. */
 	public void bt_Comprar() {
 		this.bt_Comprar.click();
 	}
-	
+
+	/*
+	 * Método utilizado para alterar a quantidade de produtos que serão adicionados
+	 * no carrinho de compras.
+	 */
 	public void quantidadeProduto(String txt_Quantidade) {
 		this.txt_Quantidade.sendKeys(txt_Quantidade);
 	}
