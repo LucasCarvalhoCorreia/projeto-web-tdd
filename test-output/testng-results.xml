@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18675" started-at="2020-01-18T21:43:13 BRT" finished-at="2020-01-18T21:43:32 BRT">
+  <suite name="Default suite" duration-ms="10983" started-at="2020-01-19T21:43:28 BRT" finished-at="2020-01-19T21:43:39 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18675" started-at="2020-01-18T21:43:13 BRT" finished-at="2020-01-18T21:43:32 BRT">
-      <class name="br.com.rsinet.hub_tdd.passes.ConsultaPorCategoriaSucesso">
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.passes.ConsultaPorCategoriaSucesso@4973813a]" name="inicio" is-config="true" duration-ms="5956" started-at="2020-01-18T21:43:13 BRT" finished-at="2020-01-18T21:43:19 BRT">
+    <test name="Default test" duration-ms="10983" started-at="2020-01-19T21:43:28 BRT" finished-at="2020-01-19T21:43:39 BRT">
+      <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@44bd4b0a]" name="inicio" is-config="true" duration-ms="7408" started-at="2020-01-19T21:43:28 BRT" finished-at="2020-01-19T21:43:36 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="PASS" signature="consultaProdutoPorCategoriaEEfetuaCompra()[pri:0, instance:br.com.rsinet.hub_tdd.passes.ConsultaPorCategoriaSucesso@4973813a]" name="consultaProdutoPorCategoriaEEfetuaCompra" duration-ms="11603" started-at="2020-01-18T21:43:19 BRT" finished-at="2020-01-18T21:43:31 BRT">
+        <test-method status="PASS" signature="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@44bd4b0a]" name="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco" duration-ms="2399" started-at="2020-01-19T21:43:36 BRT" finished-at="2020-01-19T21:43:38 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- consultaProdutoPorCategoriaEEfetuaCompra -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.passes.ConsultaPorCategoriaSucesso@4973813a]" name="fim" is-config="true" duration-ms="1073" started-at="2020-01-18T21:43:31 BRT" finished-at="2020-01-18T21:43:32 BRT">
+        </test-method> <!-- consultaPorBarraDePesquisaComProdutoInexistenteNoBanco -->
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@44bd4b0a]" name="fim" is-config="true" duration-ms="1094" started-at="2020-01-19T21:43:38 BRT" finished-at="2020-01-19T21:43:39 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-      </class> <!-- br.com.rsinet.hub_tdd.passes.ConsultaPorCategoriaSucesso -->
+      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
