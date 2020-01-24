@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso">
+      <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado">
         <methods>
-          <include name="consultaProdutoPorBarraDePesquisa"/>
           <include name="inicio"/>
+          <include name="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho"/>
           <include name="fim"/>
         </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso -->
+      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
