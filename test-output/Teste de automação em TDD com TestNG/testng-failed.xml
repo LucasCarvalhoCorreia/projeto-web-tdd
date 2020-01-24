@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Teste de automação em TDD com TestNG]">
+  <test thread-count="5" name="br.com.rsinet.hub_tdd.testes(failed)">
+    <classes>
+      <class name="br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado">
+        <methods>
+          <include name="inicio"/>
+          <include name="fim"/>
+          <include name="cadastroComPreenchimentoDeDadosIncorretos"/>
+        </methods>
+      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado -->
+    </classes>
+  </test> <!-- br.com.rsinet.hub_tdd.testes(failed) -->
+</suite> <!-- Failed suite [Teste de automação em TDD com TestNG] -->
