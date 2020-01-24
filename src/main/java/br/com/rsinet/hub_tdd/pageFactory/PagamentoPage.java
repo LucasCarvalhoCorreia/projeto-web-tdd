@@ -42,19 +42,11 @@ public class PagamentoPage {
 		this.bt_Next.click();
 	}
 
-	/* Método utilizado para limpar o campo de nome de usuario da conta Pay. */
-	public void limpaUser() {
-		this.txt_UserNamePay.clear();
-	}
-
-	/* Método utilizado para limpar o campo de senha de usuario para a conta Pay. */
-	public void limpaPass() {
-		this.txt_PasswordPay.clear();
-	}
-
 	/* Método utilizado para logar na conta Pay. */
 	public void logaContaPay(String txt_UserNamePay, String txt_PasswordPay) {
+		this.txt_UserNamePay.clear();
 		this.txt_UserNamePay.sendKeys(txt_UserNamePay);
+		this.txt_PasswordPay.clear();
 		this.txt_PasswordPay.sendKeys(txt_PasswordPay);
 	}
 

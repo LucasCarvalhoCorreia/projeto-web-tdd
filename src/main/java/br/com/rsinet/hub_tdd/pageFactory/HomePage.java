@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 
@@ -97,8 +95,12 @@ public class HomePage {
 	 * pesquisa da barra de pesquisa.
 	 */
 	public void bt_FechaSugestao(WebDriver driver) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 50);
-		wait.until(ExpectedConditions.elementToBeClickable(this.bt_FechaSugestao));
+//		WebDriverWait wait = new WebDriverWait(driver, 50);
+//		wait.until(ExpectedConditions.elementToBeClickable(this.bt_FechaSugestao));
+		
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		WebElement elemento = this.bt_FechaSugestao;
+		executor.executeScript("arguments[0].click();", elemento);
 	}
 
 }

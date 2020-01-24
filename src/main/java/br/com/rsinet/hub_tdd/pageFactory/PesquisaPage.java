@@ -36,6 +36,7 @@ public class PesquisaPage {
 	/* Método utilizado para selecionar o produto desejado na tela de pesquisa. */
 	public WebElement selecionaProduto(WebDriver driver, String produto) {
 		WebElement element = driver.findElement(By.linkText(produto));
+		element.click();
 		return element;
 	}
 

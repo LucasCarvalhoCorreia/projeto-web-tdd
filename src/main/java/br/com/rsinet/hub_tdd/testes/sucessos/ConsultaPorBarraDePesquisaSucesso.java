@@ -1,7 +1,5 @@
 package br.com.rsinet.hub_tdd.testes.sucessos;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -27,7 +25,7 @@ public class ConsultaPorBarraDePesquisaSucesso extends DriverFactory {
 	/* @ responsavel por executar todos os elementos antes do @Test. */
 	@BeforeMethod
 	public void inicio() throws Exception {
-		driver = DriverFactory.iniciaBrowser();
+		driver = DriverFactory.iniciaBrowser(DriverType.Chrome, Constant.URL);
 
 		/* Comando responsavel por ler o arquivo e aba do excel especificados. */
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "PesquisaBarra");
@@ -42,12 +40,6 @@ public class ConsultaPorBarraDePesquisaSucesso extends DriverFactory {
 	/* @ responsavel por executar a pilha de testes. */
 	@Test
 	public void consultaProdutoPorBarraDePesquisa() throws Exception {
-		/*
-		 * Comando responsavel por aguardar o tempo especificado entre as linhas de
-		 * comando.
-		 */
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 		homePage.bt_Lupa();
 
 		/*
@@ -60,7 +52,7 @@ public class ConsultaPorBarraDePesquisaSucesso extends DriverFactory {
 		homePage.bt_FechaSugestao(driver);
 
 		String produto = ExcelUtils.getCellData(2, Constant.escolheProduto);
-		pesquisaPage.selecionaProduto(driver, produto).click();
+		pesquisaPage.selecionaProduto(driver, produto);
 
 		/*
 		 * Comandos responsaveis por receber os valores necessários para acionar o
