@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PesquisaPage {
 
@@ -32,10 +34,21 @@ public class PesquisaPage {
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"Description\"]/h1")
 	public WebElement desc_Produto;
+	
+	@FindBy(how = How.ID, using = "27")
+	public WebElement id_Produto;
 
 	/* Método utilizado para selecionar o produto desejado na tela de pesquisa. */
-	public WebElement selecionaProduto(WebDriver driver, String produto) {
+	public WebElement selecionaProdutoCat(WebDriver driver, String produto) {
 		WebElement element = driver.findElement(By.linkText(produto));
+		element.click();
+		return element;
+	}
+	
+	/* Método utilizado para selecionar produto na tela de pesquisa por id. */
+	public WebElement selecionaProduto(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(this.id_Produto));
 		element.click();
 		return element;
 	}

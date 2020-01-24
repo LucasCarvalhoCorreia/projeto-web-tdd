@@ -55,7 +55,7 @@ public class ConsultaPorCategoriaErrado extends DriverFactory {
 		homePage.clicaProdutoCategoria(driver);
 
 		String produto = ExcelUtils.getCellData(5, Constant.clicaProduto);
-		pesquisaPage.selecionaProduto(driver, produto).click();
+		pesquisaPage.selecionaProdutoCat(driver, produto).click();
 
 		String txt_Quantidade = ExcelUtils.getCellData(8, Constant.quantidadeCat);
 		pesquisaPage.quantidadeProduto(txt_Quantidade);

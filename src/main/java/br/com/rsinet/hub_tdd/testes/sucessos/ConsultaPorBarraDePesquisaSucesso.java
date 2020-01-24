@@ -51,8 +51,7 @@ public class ConsultaPorBarraDePesquisaSucesso extends DriverFactory {
 
 		homePage.bt_FechaSugestao(driver);
 
-		String produto = ExcelUtils.getCellData(2, Constant.escolheProduto);
-		pesquisaPage.selecionaProduto(driver, produto);
+		pesquisaPage.selecionaProduto(driver);
 
 		/*
 		 * Comandos responsaveis por receber os valores necessários para acionar o
