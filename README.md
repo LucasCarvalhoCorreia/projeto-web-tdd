@@ -1,5 +1,4 @@
 # projeto-tdd
-Teste Automação em TDD
 Projeto desenvolvido com o objetivo de testar conhecimentos em relação a desenvolvimento de testes de automação em TDD.
 
 Conteúdo e descrições do projeto:
