@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Teste de automação em TDD com TestNG]">
-  <test thread-count="5" name="ConsultaPorBarraDePesquisaErrado(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado">
+      <class name="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso">
         <methods>
-          <include name="fim"/>
           <include name="inicio"/>
-          <include name="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco"/>
+          <include name="fim"/>
+          <include name="consultaProdutoPorCategoriaEEfetuaCompra"/>
         </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado -->
+      </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso -->
     </classes>
-  </test> <!-- ConsultaPorBarraDePesquisaErrado(failed) -->
-</suite> <!-- Failed suite [Teste de automação em TDD com TestNG] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Teste de automação em TDD com TestNG]">
-  <test thread-count="5" name="ConsultaPorBarraDePesquisaErrado(failed)">
+  <test thread-count="5" name="CadastroSucesso(failed)">
     <classes>
-      <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado">
+      <class name="br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso">
         <methods>
-          <include name="fim"/>
           <include name="inicio"/>
-          <include name="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco"/>
+          <include name="fim"/>
+          <include name="cadastrarUsuarioNoBanco"/>
         </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado -->
+      </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso -->
     </classes>
-  </test> <!-- ConsultaPorBarraDePesquisaErrado(failed) -->
+  </test> <!-- CadastroSucesso(failed) -->
+  <test thread-count="5" name="ConsultaPorCategoriaSucesso(failed)">
+    <classes>
+      <class name="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso">
+        <methods>
+          <include name="inicio"/>
+          <include name="fim"/>
+          <include name="consultaProdutoPorCategoriaEEfetuaCompra"/>
+        </methods>
+      </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso -->
+    </classes>
+  </test> <!-- ConsultaPorCategoriaSucesso(failed) -->
+  <test thread-count="5" name="ConsultaPorCategoriaErrado(failed)">
+    <classes>
+      <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado">
+        <methods>
+          <include name="inicio"/>
+          <include name="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho"/>
+          <include name="fim"/>
+        </methods>
+      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado -->
+    </classes>
+  </test> <!-- ConsultaPorCategoriaErrado(failed) -->
 </suite> <!-- Failed suite [Teste de automação em TDD com TestNG] -->

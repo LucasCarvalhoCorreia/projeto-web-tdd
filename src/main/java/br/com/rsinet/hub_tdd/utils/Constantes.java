@@ -1,6 +1,6 @@
 package br.com.rsinet.hub_tdd.utils;
 
-public class Constant {
+public class Constantes {
 
 	/*
 	 * Comando responsavel por identificar a url do site que serão aplicados a massa
