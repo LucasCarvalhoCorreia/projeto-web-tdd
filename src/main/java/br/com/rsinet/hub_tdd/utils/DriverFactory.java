@@ -20,28 +20,27 @@ public class DriverFactory {
 	}
 
 	public static WebDriver iniciaBrowser(DriverType tipo, String url) throws Exception {
-		switch (tipo) {
-		case InternetExplorer:
-			driver = new InternetExplorerDriver();
-			driver.manage().window().maximize();
-			driver.get(url);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			break;
-		case FireFox:
-			driver = new FirefoxDriver();
-			driver.manage().window().maximize();
-			driver.get(url);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			break;
-		default:
-			driver = new ChromeDriver();
-			driver.manage().window().maximize();
-			driver.get(url);
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			break;
+			switch (tipo) {
+			case InternetExplorer:
+				driver = new InternetExplorerDriver();
+				driver.manage().window().maximize();
+				driver.get(url);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				break;
+			case FireFox:
+				driver = new FirefoxDriver();
+				driver.manage().window().maximize();
+				driver.get(url);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				break;
+			default:
+				driver = new ChromeDriver();
+				driver.manage().window().maximize();
+				driver.get(url);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				break;
 
-		}
-
+			}
 		return driver;
 	}
 

@@ -2,100 +2,100 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Teste de automação em TDD com TestNG" duration-ms="104335" started-at="2020-01-28T10:37:06 BRT" finished-at="2020-01-28T10:38:50 BRT">
+  <suite name="Teste de automação em TDD com TestNG" duration-ms="102848" started-at="2020-01-28T11:11:54 BRT" finished-at="2020-01-28T11:13:37 BRT">
     <groups>
     </groups>
-    <test name="CadastroSucesso" duration-ms="19811" started-at="2020-01-28T10:37:06 BRT" finished-at="2020-01-28T10:37:26 BRT">
+    <test name="CadastroSucesso" duration-ms="19337" started-at="2020-01-28T11:11:54 BRT" finished-at="2020-01-28T11:12:13 BRT">
       <class name="br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso">
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@57855c9a]" name="inicio" is-config="true" duration-ms="11622" started-at="2020-01-28T10:37:06 BRT" finished-at="2020-01-28T10:37:18 BRT">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@57855c9a]" name="inicio" is-config="true" duration-ms="11409" started-at="2020-01-28T11:11:54 BRT" finished-at="2020-01-28T11:12:05 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="PASS" signature="cadastrarUsuarioNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@57855c9a]" name="cadastrarUsuarioNoBanco" duration-ms="6916" started-at="2020-01-28T10:37:18 BRT" finished-at="2020-01-28T10:37:25 BRT">
+        <test-method status="PASS" signature="cadastrarUsuarioNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@57855c9a]" name="cadastrarUsuarioNoBanco" duration-ms="6626" started-at="2020-01-28T11:12:05 BRT" finished-at="2020-01-28T11:12:12 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cadastrarUsuarioNoBanco -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@57855c9a]" name="fim" is-config="true" duration-ms="1237" started-at="2020-01-28T10:37:25 BRT" finished-at="2020-01-28T10:37:26 BRT">
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@57855c9a]" name="fim" is-config="true" duration-ms="1265" started-at="2020-01-28T11:12:12 BRT" finished-at="2020-01-28T11:12:13 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
       </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso -->
     </test> <!-- CadastroSucesso -->
-    <test name="CadastroErrado" duration-ms="17419" started-at="2020-01-28T10:37:26 BRT" finished-at="2020-01-28T10:37:43 BRT">
+    <test name="CadastroErrado" duration-ms="17133" started-at="2020-01-28T11:12:13 BRT" finished-at="2020-01-28T11:12:30 BRT">
       <class name="br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado">
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@184f6be2]" name="inicio" is-config="true" duration-ms="10030" started-at="2020-01-28T10:37:26 BRT" finished-at="2020-01-28T10:37:36 BRT">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@184f6be2]" name="inicio" is-config="true" duration-ms="9996" started-at="2020-01-28T11:12:13 BRT" finished-at="2020-01-28T11:12:23 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="PASS" signature="cadastroComPreenchimentoDeDadosIncorretos()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@184f6be2]" name="cadastroComPreenchimentoDeDadosIncorretos" duration-ms="6453" started-at="2020-01-28T10:37:36 BRT" finished-at="2020-01-28T10:37:42 BRT">
+        <test-method status="PASS" signature="cadastroComPreenchimentoDeDadosIncorretos()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@184f6be2]" name="cadastroComPreenchimentoDeDadosIncorretos" duration-ms="6230" started-at="2020-01-28T11:12:23 BRT" finished-at="2020-01-28T11:12:29 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cadastroComPreenchimentoDeDadosIncorretos -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@184f6be2]" name="fim" is-config="true" duration-ms="933" started-at="2020-01-28T10:37:42 BRT" finished-at="2020-01-28T10:37:43 BRT">
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@184f6be2]" name="fim" is-config="true" duration-ms="903" started-at="2020-01-28T11:12:29 BRT" finished-at="2020-01-28T11:12:30 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
       </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado -->
     </test> <!-- CadastroErrado -->
-    <test name="ConsultaPorBarraDePesquisaSucesso" duration-ms="14811" started-at="2020-01-28T10:37:43 BRT" finished-at="2020-01-28T10:37:58 BRT">
+    <test name="ConsultaPorBarraDePesquisaSucesso" duration-ms="14331" started-at="2020-01-28T11:12:30 BRT" finished-at="2020-01-28T11:12:45 BRT">
       <class name="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso">
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@5f282abb]" name="inicio" is-config="true" duration-ms="9965" started-at="2020-01-28T10:37:43 BRT" finished-at="2020-01-28T10:37:53 BRT">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@5f282abb]" name="inicio" is-config="true" duration-ms="9913" started-at="2020-01-28T11:12:30 BRT" finished-at="2020-01-28T11:12:40 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="PASS" signature="consultaProdutoPorBarraDePesquisa()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@5f282abb]" name="consultaProdutoPorBarraDePesquisa" duration-ms="3917" started-at="2020-01-28T10:37:53 BRT" finished-at="2020-01-28T10:37:57 BRT">
+        <test-method status="PASS" signature="consultaProdutoPorBarraDePesquisa()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@5f282abb]" name="consultaProdutoPorBarraDePesquisa" duration-ms="3499" started-at="2020-01-28T11:12:40 BRT" finished-at="2020-01-28T11:12:44 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- consultaProdutoPorBarraDePesquisa -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@5f282abb]" name="fim" is-config="true" duration-ms="928" started-at="2020-01-28T10:37:57 BRT" finished-at="2020-01-28T10:37:58 BRT">
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@5f282abb]" name="fim" is-config="true" duration-ms="916" started-at="2020-01-28T11:12:44 BRT" finished-at="2020-01-28T11:12:45 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
       </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso -->
     </test> <!-- ConsultaPorBarraDePesquisaSucesso -->
-    <test name="ConsultaPorBarraDePesquisaErrado" duration-ms="13094" started-at="2020-01-28T10:37:58 BRT" finished-at="2020-01-28T10:38:11 BRT">
+    <test name="ConsultaPorBarraDePesquisaErrado" duration-ms="12872" started-at="2020-01-28T11:12:45 BRT" finished-at="2020-01-28T11:12:57 BRT">
       <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado">
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@15d0c81b]" name="inicio" is-config="true" duration-ms="10009" started-at="2020-01-28T10:37:58 BRT" finished-at="2020-01-28T10:38:08 BRT">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@15d0c81b]" name="inicio" is-config="true" duration-ms="10011" started-at="2020-01-28T11:12:45 BRT" finished-at="2020-01-28T11:12:55 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="PASS" signature="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@15d0c81b]" name="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco" duration-ms="2196" started-at="2020-01-28T10:38:08 BRT" finished-at="2020-01-28T10:38:10 BRT">
+        <test-method status="PASS" signature="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@15d0c81b]" name="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco" duration-ms="1948" started-at="2020-01-28T11:12:55 BRT" finished-at="2020-01-28T11:12:57 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- consultaPorBarraDePesquisaComProdutoInexistenteNoBanco -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@15d0c81b]" name="fim" is-config="true" duration-ms="888" started-at="2020-01-28T10:38:10 BRT" finished-at="2020-01-28T10:38:11 BRT">
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@15d0c81b]" name="fim" is-config="true" duration-ms="908" started-at="2020-01-28T11:12:57 BRT" finished-at="2020-01-28T11:12:57 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
       </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado -->
     </test> <!-- ConsultaPorBarraDePesquisaErrado -->
-    <test name="ConsultaPorCategoriaSucesso" duration-ms="22368" started-at="2020-01-28T10:38:11 BRT" finished-at="2020-01-28T10:38:34 BRT">
+    <test name="ConsultaPorCategoriaSucesso" duration-ms="22430" started-at="2020-01-28T11:12:58 BRT" finished-at="2020-01-28T11:13:20 BRT">
       <class name="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso">
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@27a8c74e]" name="inicio" is-config="true" duration-ms="10038" started-at="2020-01-28T10:38:11 BRT" finished-at="2020-01-28T10:38:21 BRT">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@27a8c74e]" name="inicio" is-config="true" duration-ms="9925" started-at="2020-01-28T11:12:58 BRT" finished-at="2020-01-28T11:13:07 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="PASS" signature="consultaProdutoPorCategoriaEEfetuaCompra()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@27a8c74e]" name="consultaProdutoPorCategoriaEEfetuaCompra" duration-ms="11410" started-at="2020-01-28T10:38:21 BRT" finished-at="2020-01-28T10:38:33 BRT">
+        <test-method status="PASS" signature="consultaProdutoPorCategoriaEEfetuaCompra()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@27a8c74e]" name="consultaProdutoPorCategoriaEEfetuaCompra" duration-ms="11603" started-at="2020-01-28T11:13:07 BRT" finished-at="2020-01-28T11:13:19 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- consultaProdutoPorCategoriaEEfetuaCompra -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@27a8c74e]" name="fim" is-config="true" duration-ms="920" started-at="2020-01-28T10:38:33 BRT" finished-at="2020-01-28T10:38:34 BRT">
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@27a8c74e]" name="fim" is-config="true" duration-ms="900" started-at="2020-01-28T11:13:19 BRT" finished-at="2020-01-28T11:13:20 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
       </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso -->
     </test> <!-- ConsultaPorCategoriaSucesso -->
-    <test name="ConsultaPorCategoriaErrado" duration-ms="16686" started-at="2020-01-28T10:38:34 BRT" finished-at="2020-01-28T10:38:50 BRT">
+    <test name="ConsultaPorCategoriaErrado" duration-ms="16552" started-at="2020-01-28T11:13:20 BRT" finished-at="2020-01-28T11:13:37 BRT">
       <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado">
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@76f2b07d]" name="inicio" is-config="true" duration-ms="9981" started-at="2020-01-28T10:38:34 BRT" finished-at="2020-01-28T10:38:44 BRT">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@76f2b07d]" name="inicio" is-config="true" duration-ms="9961" started-at="2020-01-28T11:13:20 BRT" finished-at="2020-01-28T11:13:30 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="PASS" signature="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@76f2b07d]" name="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho" duration-ms="5715" started-at="2020-01-28T10:38:44 BRT" finished-at="2020-01-28T10:38:49 BRT">
+        <test-method status="PASS" signature="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@76f2b07d]" name="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho" duration-ms="5585" started-at="2020-01-28T11:13:30 BRT" finished-at="2020-01-28T11:13:36 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho -->
-        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@76f2b07d]" name="fim" is-config="true" duration-ms="989" started-at="2020-01-28T10:38:49 BRT" finished-at="2020-01-28T10:38:50 BRT">
+        <test-method status="PASS" signature="fim()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@76f2b07d]" name="fim" is-config="true" duration-ms="1005" started-at="2020-01-28T11:13:36 BRT" finished-at="2020-01-28T11:13:37 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
