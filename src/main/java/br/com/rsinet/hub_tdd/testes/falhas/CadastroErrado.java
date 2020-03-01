@@ -3,21 +3,26 @@ package br.com.rsinet.hub_tdd.testes.falhas;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import br.com.rsinet.hub_tdd.utils.PegaMassa;
-import br.com.rsinet.hub_tdd.pageFactory.CadastroPage;
-import br.com.rsinet.hub_tdd.pageFactory.HomePage;
-import br.com.rsinet.hub_tdd.utils.Constantes;
-import br.com.rsinet.hub_tdd.utils.DriverFactory;
-import br.com.rsinet.hub_tdd.utils.DriverFactory.DriverType;
-import br.com.rsinet.hub_tdd.utils.ExcelUtils;
-import br.com.rsinet.hub_tdd.utils.Prints;
+import com.aventstack.extentreports.ExtentTest;
+
+import br.com.rsinet.hub_tdd.excel.Constantes;
+import br.com.rsinet.hub_tdd.excel.ExcelUtils;
+import br.com.rsinet.hub_tdd.excel.PegaMassa;
+import br.com.rsinet.hub_tdd.extendReport.ExtendReport;
+import br.com.rsinet.hub_tdd.manager.DriverFactory;
+import br.com.rsinet.hub_tdd.pageObject.CadastroPage;
+import br.com.rsinet.hub_tdd.pageObject.HomePage;
 
 public class CadastroErrado {
 
+	private ExtentTest test;
 	private WebDriver driver;
 	private HomePage homePage;
 	private CadastroPage cadastroPage;
@@ -26,9 +31,15 @@ public class CadastroErrado {
 	/* Área responsavel pelos testes de falha. */
 
 	/* @ responsavel por executar todos os elementos antes do @Test. */
+	
+	@BeforeTest
+	public void iniciaExtendReport() {
+		ExtendReport.setExtent();
+	}
+	
 	@BeforeMethod
 	public void inicio() throws Exception {
-		driver = DriverFactory.iniciaBrowser(DriverType.Chrome, Constantes.URL);
+		driver = DriverFactory.iniciaBrowser();
 
 		/* Comando responsavel por ler o arquivo e aba do excel especificados. */
 		ExcelUtils.setExcelFile(Constantes.Path_TestData + Constantes.File_TestData, "Cadastro");
@@ -44,6 +55,8 @@ public class CadastroErrado {
 	/* @ responsavel por executar a pilha de testes. */
 	@Test
 	public void cadastroComPreenchimentoDeDadosIncorretos() throws Exception {
+		test = ExtendReport.createTest("CadastroErrado ");
+		
 		homePage.bt_UserIcon();
 
 		homePage.bt_CriarNovaConta();
@@ -52,9 +65,18 @@ public class CadastroErrado {
 		 * Atribui o valor recebido pela coluna e linha especificada no arquivo excel a
 		 * uma variavel
 		 */
-		cadastroPage.cadastrarUsuario(pegaMassa.UserName(), pegaMassa.Email(), pegaMassa.Password(),
-				pegaMassa.ConfirmPasswordErrado(), pegaMassa.FirstName(), pegaMassa.LastName(), pegaMassa.Telefone(),
-				pegaMassa.Pais(), pegaMassa.Cidade(), pegaMassa.Endereco(), pegaMassa.Estado(), pegaMassa.Cep());
+		cadastroPage.preencheUserName(pegaMassa.UserName());
+		cadastroPage.preencheEmail(pegaMassa.Email());
+		cadastroPage.preenchePassword(pegaMassa.Password());
+		cadastroPage.preencheConfirmPassword(pegaMassa.ConfirmPasswordErrado());
+		cadastroPage.preencheFirstName(pegaMassa.FirstName());
+		cadastroPage.preencheLastName(pegaMassa.LastName());
+		cadastroPage.preencheTelefone(pegaMassa.Telefone());
+		cadastroPage.preenchePais(pegaMassa.Pais());
+		cadastroPage.preencheCidade(pegaMassa.Cidade());
+		cadastroPage.preencheEndereco(pegaMassa.Endereco());
+		cadastroPage.preencheEstado(pegaMassa.Estado());
+		cadastroPage.preencheCep(pegaMassa.Cep());
 
 		cadastroPage.check_Offers();
 		cadastroPage.check_Agree();
@@ -79,9 +101,14 @@ public class CadastroErrado {
 
 	/* @ responsaverl por executar todos os elementos depois do @Test. */
 	@AfterMethod
-	public void fim() throws Exception {
-		Prints.tirarPrintsDeFalha("CadastroErrado ", driver);
-		DriverFactory.fechaBrowser(driver);
+	public void fim(ITestResult result) throws Exception {
+		ExtendReport.tearDown(result, test, driver);
+		DriverFactory.fechaBrowser();
+	}
+	
+	@AfterTest
+	public void finalizaExtendReport() {
+		ExtendReport.endReport();
 	}
 
 }

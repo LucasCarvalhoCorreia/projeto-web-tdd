@@ -1,59 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Teste de automação em TDD com TestNG]">
-  <test thread-count="5" name="CadastroErrado(failed)">
-    <classes>
-      <class name="br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado">
-        <methods>
-          <include name="inicio"/>
-          <include name="fim"/>
-          <include name="cadastroComPreenchimentoDeDadosIncorretos"/>
-        </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado -->
-    </classes>
-  </test> <!-- CadastroErrado(failed) -->
-  <test thread-count="5" name="ConsultaPorBarraDePesquisaSucesso(failed)">
-    <classes>
-      <class name="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso">
-        <methods>
-          <include name="consultaProdutoPorBarraDePesquisa"/>
-          <include name="inicio"/>
-          <include name="fim"/>
-        </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso -->
-    </classes>
-  </test> <!-- ConsultaPorBarraDePesquisaSucesso(failed) -->
-  <test thread-count="5" name="ConsultaPorBarraDePesquisaErrado(failed)">
-    <classes>
-      <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado">
-        <methods>
-          <include name="fim"/>
-          <include name="inicio"/>
-          <include name="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco"/>
-        </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado -->
-    </classes>
-  </test> <!-- ConsultaPorBarraDePesquisaErrado(failed) -->
-  <test thread-count="5" name="ConsultaPorCategoriaSucesso(failed)">
+  <test thread-count="5" name="Suite de testes para projeto de automação em TDD(failed)">
     <classes>
       <class name="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso">
         <methods>
           <include name="inicio"/>
           <include name="fim"/>
+          <include name="iniciaExtendReport"/>
+          <include name="finalizaExtendReport"/>
           <include name="consultaProdutoPorCategoriaEEfetuaCompra"/>
         </methods>
       </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso -->
-    </classes>
-  </test> <!-- ConsultaPorCategoriaSucesso(failed) -->
-  <test thread-count="5" name="ConsultaPorCategoriaErrado(failed)">
-    <classes>
       <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado">
         <methods>
+          <include name="iniciaExtendReport"/>
           <include name="inicio"/>
+          <include name="finalizaExtendReport"/>
           <include name="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho"/>
           <include name="fim"/>
         </methods>
       </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado -->
+      <class name="br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso">
+        <methods>
+          <include name="finalizaExtendReport"/>
+          <include name="iniciaExtendReport"/>
+          <include name="inicio"/>
+          <include name="fim"/>
+          <include name="cadastrarUsuarioNoBanco"/>
+        </methods>
+      </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso -->
+      <class name="br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado">
+        <methods>
+          <include name="inicio"/>
+          <include name="iniciaExtendReport"/>
+          <include name="finalizaExtendReport"/>
+          <include name="fim"/>
+          <include name="cadastroComPreenchimentoDeDadosIncorretos"/>
+        </methods>
+      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado -->
     </classes>
-  </test> <!-- ConsultaPorCategoriaErrado(failed) -->
+  </test> <!-- Suite de testes para projeto de automação em TDD(failed) -->
 </suite> <!-- Failed suite [Teste de automação em TDD com TestNG] -->

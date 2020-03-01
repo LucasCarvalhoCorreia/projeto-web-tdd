@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG">
-              <span class="suite-name border-passed">Teste de automação em TDD com TestNG</span>
+              <span class="suite-name border-failed">Teste de automação em TDD com TestNG</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Teste_de_automa__o_em_TDD_com_TestNG">
-                    <span>C:\Users\lucas.correia\git\projeto-tdd\TestNG.xml</span>
+                    <span>C:\Users\Lucas\git\projeto-web-tdd\SuiteDeTestes.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Teste_de_automa__o_em_TDD_com_TestNG">
-                    <span class="test-stats">6 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">6 methods, 4 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" class="hide-methods failed suite-Teste_de_automa__o_em_TDD_com_TestNG"> (hide)</a> <!-- hide-methods failed suite-Teste_de_automa__o_em_TDD_com_TestNG -->
+                      <a href="#" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" class="show-methods failed suite-Teste_de_automa__o_em_TDD_com_TestNG"> (show)</a> <!-- show-methods failed suite-Teste_de_automa__o_em_TDD_com_TestNG -->
+                    </span>
+                    <div class="method-list-content failed suite-Teste_de_automa__o_em_TDD_com_TestNG">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" title="br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso" hash-for-method="cadastrarUsuarioNoBanco">cadastrarUsuarioNoBanco</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" title="br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado" hash-for-method="cadastroComPreenchimentoDeDadosIncorretos">cadastroComPreenchimentoDeDadosIncorretos</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" title="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado" hash-for-method="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho">consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" title="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso" hash-for-method="consultaProdutoPorCategoriaEEfetuaCompra">consultaProdutoPorCategoriaEEfetuaCompra</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Teste_de_automa__o_em_TDD_com_TestNG -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,32 +131,12 @@
                     <div class="method-list-content passed suite-Teste_de_automa__o_em_TDD_com_TestNG">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" title="br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso" hash-for-method="cadastrarUsuarioNoBanco">cadastrarUsuarioNoBanco</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" title="br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado" hash-for-method="cadastroComPreenchimentoDeDadosIncorretos">cadastroComPreenchimentoDeDadosIncorretos</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" title="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado" hash-for-method="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco">consultaPorBarraDePesquisaComProdutoInexistenteNoBanco</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" title="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado" hash-for-method="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho">consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" title="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso" hash-for-method="consultaProdutoPorBarraDePesquisa">consultaProdutoPorBarraDePesquisa</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" title="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso" hash-for-method="consultaProdutoPorCategoriaEEfetuaCompra">consultaProdutoPorCategoriaEEfetuaCompra</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Teste_de_automa__o_em_TDD_com_TestNG -->
@@ -142,39 +151,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Teste_de_automa__o_em_TDD_com_TestNG" class="panel Teste_de_automa__o_em_TDD_com_TestNG">
-          <div class="suite-Teste_de_automa__o_em_TDD_com_TestNG-class-passed">
+          <div class="suite-Teste_de_automa__o_em_TDD_com_TestNG-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="cadastroComPreenchimentoDeDadosIncorretos">
-                  </a> <!-- cadastroComPreenchimentoDeDadosIncorretos -->
-                  <span class="method-name">cadastroComPreenchimentoDeDadosIncorretos</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Teste_de_automa__o_em_TDD_com_TestNG-class-passed -->
-          <div class="suite-Teste_de_automa__o_em_TDD_com_TestNG-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="cadastrarUsuarioNoBanco">
-                  </a> <!-- cadastrarUsuarioNoBanco -->
-                  <span class="method-name">cadastrarUsuarioNoBanco</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Teste_de_automa__o_em_TDD_com_TestNG-class-passed -->
-          <div class="suite-Teste_de_automa__o_em_TDD_com_TestNG-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -183,6 +162,128 @@
                   <a name="consultaProdutoPorCategoriaEEfetuaCompra">
                   </a> <!-- consultaProdutoPorCategoriaEEfetuaCompra -->
                   <span class="method-name">consultaProdutoPorCategoriaEEfetuaCompra</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;productName ng-binding&quot;&gt;...&lt;/a&gt; is not clickable at point (643, 589). Other element would receive the click: &lt;div class=&quot;PopUp&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=80.0.3987.122)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-QI1A0TH&apos;, ip: &apos;192.168.25.213&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Lucas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58892}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c018599b6241c2e1d67d90b9bcefa91c
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at br.com.rsinet.hub_tdd.pageObject.PesquisaPage.selecionaProdutoCat(PesquisaPage.java:43)
+	at br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso.consultaProdutoPorCategoriaEEfetuaCompra(ConsultaPorCategoriaSucesso.java:75)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Teste_de_automa__o_em_TDD_com_TestNG-class-failed -->
+          <div class="suite-Teste_de_automa__o_em_TDD_com_TestNG-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho">
+                  </a> <!-- consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho -->
+                  <span class="method-name">consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;productName ng-binding&quot;&gt;...&lt;/a&gt; is not clickable at point (643, 589). Other element would receive the click: &lt;div class=&quot;PopUp&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=80.0.3987.122)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-QI1A0TH&apos;, ip: &apos;192.168.25.213&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Lucas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58934}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: aee15ebc52e1c7aa3bc2ae0034734bfd
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at br.com.rsinet.hub_tdd.pageObject.PesquisaPage.selecionaProdutoCat(PesquisaPage.java:43)
+	at br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado.consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho(ConsultaPorCategoriaErrado.java:75)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Teste_de_automa__o_em_TDD_com_TestNG-class-failed -->
+          <div class="suite-Teste_de_automa__o_em_TDD_com_TestNG-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="cadastrarUsuarioNoBanco">
+                  </a> <!-- cadastrarUsuarioNoBanco -->
+                  <span class="method-name">cadastrarUsuarioNoBanco</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Brazil
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-QI1A0TH&apos;, ip: &apos;192.168.25.213&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at br.com.rsinet.hub_tdd.pageObject.CadastroPage.preenchePais(CadastroPage.java:106)
+	at br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso.cadastrarUsuarioNoBanco(CadastroSucesso.java:75)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Teste_de_automa__o_em_TDD_com_TestNG-class-failed -->
+          <div class="suite-Teste_de_automa__o_em_TDD_com_TestNG-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="cadastroComPreenchimentoDeDadosIncorretos">
+                  </a> <!-- cadastroComPreenchimentoDeDadosIncorretos -->
+                  <span class="method-name">cadastroComPreenchimentoDeDadosIncorretos</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Brazil
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-QI1A0TH&apos;, ip: &apos;192.168.25.213&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at br.com.rsinet.hub_tdd.pageObject.CadastroPage.preenchePais(CadastroPage.java:106)
+	at br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado.cadastroComPreenchimentoDeDadosIncorretos(CadastroErrado.java:75)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Teste_de_automa__o_em_TDD_com_TestNG-class-failed -->
+          <div class="suite-Teste_de_automa__o_em_TDD_com_TestNG-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="consultaProdutoPorBarraDePesquisa">
+                  </a> <!-- consultaProdutoPorBarraDePesquisa -->
+                  <span class="method-name">consultaProdutoPorBarraDePesquisa</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -202,76 +303,26 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Teste_de_automa__o_em_TDD_com_TestNG-class-passed -->
-          <div class="suite-Teste_de_automa__o_em_TDD_com_TestNG-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="consultaProdutoPorBarraDePesquisa">
-                  </a> <!-- consultaProdutoPorBarraDePesquisa -->
-                  <span class="method-name">consultaProdutoPorBarraDePesquisa</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Teste_de_automa__o_em_TDD_com_TestNG-class-passed -->
-          <div class="suite-Teste_de_automa__o_em_TDD_com_TestNG-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho">
-                  </a> <!-- consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho -->
-                  <span class="method-name">consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Teste_de_automa__o_em_TDD_com_TestNG-class-passed -->
         </div> <!-- panel Teste_de_automa__o_em_TDD_com_TestNG -->
         <div panel-name="test-xml-Teste_de_automa__o_em_TDD_com_TestNG" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\lucas.correia\git\projeto-tdd\TestNG.xml</span>
+            <span class="header-content">C:\Users\Lucas\git\projeto-web-tdd\SuiteDeTestes.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Teste de automação em TDD com TestNG&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;CadastroSucesso&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Suite de testes para projeto de automação em TDD&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- CadastroSucesso --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;CadastroErrado&quot;&gt;
-    &lt;classes&gt;
       &lt;class name=&quot;br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- CadastroErrado --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;ConsultaPorBarraDePesquisaSucesso&quot;&gt;
-    &lt;classes&gt;
       &lt;class name=&quot;br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ConsultaPorBarraDePesquisaSucesso --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;ConsultaPorBarraDePesquisaErrado&quot;&gt;
-    &lt;classes&gt;
       &lt;class name=&quot;br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ConsultaPorBarraDePesquisaErrado --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;ConsultaPorCategoriaSucesso&quot;&gt;
-    &lt;classes&gt;
       &lt;class name=&quot;br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ConsultaPorCategoriaSucesso --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;ConsultaPorCategoriaErrado&quot;&gt;
-    &lt;classes&gt;
       &lt;class name=&quot;br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ConsultaPorCategoriaErrado --&gt;
+  &lt;/test&gt; &lt;!-- Suite de testes para projeto de automação em TDD --&gt;
 &lt;/suite&gt; &lt;!-- Teste de automação em TDD com TestNG --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -283,22 +334,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">CadastroSucesso (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">CadastroErrado (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">ConsultaPorBarraDePesquisaSucesso (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">ConsultaPorBarraDePesquisaErrado (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">ConsultaPorCategoriaSucesso (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">ConsultaPorCategoriaErrado (1 class)</span>
+                <span class="test-name">Suite de testes para projeto de automação em TDD (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -326,34 +362,34 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'consultaProdutoPorCategoriaEEfetuaCompra')
-data.setCell(0, 2, 'br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso')
-data.setCell(0, 3, 11603);
+data.setCell(0, 1, 'cadastroComPreenchimentoDeDadosIncorretos')
+data.setCell(0, 2, 'br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado')
+data.setCell(0, 3, 14629);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'cadastrarUsuarioNoBanco')
 data.setCell(1, 2, 'br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso')
-data.setCell(1, 3, 6626);
+data.setCell(1, 3, 13912);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'cadastroComPreenchimentoDeDadosIncorretos')
-data.setCell(2, 2, 'br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado')
-data.setCell(2, 3, 6230);
+data.setCell(2, 1, 'consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho')
+data.setCell(2, 2, 'br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado')
+data.setCell(2, 3, 9154);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho')
-data.setCell(3, 2, 'br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado')
-data.setCell(3, 3, 5585);
+data.setCell(3, 1, 'consultaProdutoPorCategoriaEEfetuaCompra')
+data.setCell(3, 2, 'br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso')
+data.setCell(3, 3, 8451);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'consultaProdutoPorBarraDePesquisa')
 data.setCell(4, 2, 'br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso')
-data.setCell(4, 3, 3499);
+data.setCell(4, 3, 6288);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'consultaPorBarraDePesquisaComProdutoInexistenteNoBanco')
 data.setCell(5, 2, 'br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado')
-data.setCell(5, 3, 1948);
+data.setCell(5, 3, 3231);
 window.suiteTableData['Teste_de_automa__o_em_TDD_com_TestNG']= { tableData: data, tableDiv: 'times-div-Teste_de_automa__o_em_TDD_com_TestNG'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 35 seconds</span>
+              <span class="suite-total-time">Total running time: 55 seconds</span>
               <div id="times-div-Teste_de_automa__o_em_TDD_com_TestNG">
               </div> <!-- times-div-Teste_de_automa__o_em_TDD_com_TestNG -->
             </div> <!-- times-div -->
@@ -379,94 +415,186 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">iniciaExtendReport</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">iniciaExtendReport</span>
+                <span class="method-start">213 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">iniciaExtendReport</span>
+                <span class="method-start">215 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">iniciaExtendReport</span>
+                <span class="method-start">216 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">iniciaExtendReport</span>
+                <span class="method-start">217 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">iniciaExtendReport</span>
+                <span class="method-start">218 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">inicio</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">242 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">cadastrarUsuarioNoBanco</span>
-                <span class="method-start">11409 ms</span>
+                <span class="method-start">9861 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">fim</span>
-                <span class="method-start">18040 ms</span>
+                <span class="method-name">fim([TestResult name=cadastrarUsuarioNoBanco status=FAILURE method=CadastroSucesso.cadastrarUsuarioNoBan...)</span>
+                <span class="method-start">23800 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">inicio</span>
-                <span class="method-start">19372 ms</span>
+                <span class="method-start">25031 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">cadastroComPreenchimentoDeDadosIncorretos</span>
-                <span class="method-start">29368 ms</span>
+                <span class="method-start">29762 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">fim</span>
-                <span class="method-start">35601 ms</span>
+                <span class="method-name">fim([TestResult name=cadastroComPreenchimentoDeDadosIncorretos status=FAILURE method=CadastroErrado.cada...)</span>
+                <span class="method-start">44393 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">inicio</span>
-                <span class="method-start">36540 ms</span>
+                <span class="method-start">45419 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">consultaProdutoPorBarraDePesquisa</span>
-                <span class="method-start">46453 ms</span>
+                <span class="method-start">49675 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">fim</span>
-                <span class="method-start">49954 ms</span>
+                <span class="method-name">fim([TestResult name=consultaProdutoPorBarraDePesquisa status=SUCCESS method=ConsultaPorBarraDePesquisaS...)</span>
+                <span class="method-start">55965 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">inicio</span>
-                <span class="method-start">50906 ms</span>
+                <span class="method-start">57017 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">consultaPorBarraDePesquisaComProdutoInexistenteNoBanco</span>
-                <span class="method-start">60917 ms</span>
+                <span class="method-start">61278 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">fim</span>
-                <span class="method-start">62867 ms</span>
+                <span class="method-name">fim([TestResult name=consultaPorBarraDePesquisaComProdutoInexistenteNoBanco status=SUCCESS method=Consul...)</span>
+                <span class="method-start">64510 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">inicio</span>
-                <span class="method-start">63814 ms</span>
+                <span class="method-start">65566 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">consultaProdutoPorCategoriaEEfetuaCompra</span>
-                <span class="method-start">73739 ms</span>
+                <span class="method-start">70377 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">fim</span>
-                <span class="method-start">85343 ms</span>
+                <span class="method-name">fim([TestResult name=consultaProdutoPorCategoriaEEfetuaCompra status=FAILURE method=ConsultaPorCategoria...)</span>
+                <span class="method-start">78830 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">inicio</span>
-                <span class="method-start">86270 ms</span>
+                <span class="method-start">79990 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho</span>
-                <span class="method-start">96231 ms</span>
+                <span class="method-start">85627 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">fim</span>
-                <span class="method-start">101817 ms</span>
+                <span class="method-name">fim([TestResult name=consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho status=FAILURE method=C...)</span>
+                <span class="method-start">94783 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">finalizaExtendReport</span>
+                <span class="method-start">96454 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">finalizaExtendReport</span>
+                <span class="method-start">96933 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">finalizaExtendReport</span>
+                <span class="method-start">96993 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">finalizaExtendReport</span>
+                <span class="method-start">97052 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">finalizaExtendReport</span>
+                <span class="method-start">97103 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">finalizaExtendReport</span>
+                <span class="method-start">97151 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
