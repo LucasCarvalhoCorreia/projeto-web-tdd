@@ -3,42 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Teste de automação em TDD com TestNG]">
   <test thread-count="5" name="Suite de testes para projeto de automação em TDD(failed)">
     <classes>
-      <class name="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso">
-        <methods>
-          <include name="inicio"/>
-          <include name="fim"/>
-          <include name="iniciaExtendReport"/>
-          <include name="finalizaExtendReport"/>
-          <include name="consultaProdutoPorCategoriaEEfetuaCompra"/>
-        </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso -->
-      <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado">
-        <methods>
-          <include name="iniciaExtendReport"/>
-          <include name="inicio"/>
-          <include name="finalizaExtendReport"/>
-          <include name="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho"/>
-          <include name="fim"/>
-        </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado -->
-      <class name="br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso">
+      <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado">
         <methods>
           <include name="finalizaExtendReport"/>
+          <include name="fim"/>
           <include name="iniciaExtendReport"/>
           <include name="inicio"/>
-          <include name="fim"/>
-          <include name="cadastrarUsuarioNoBanco"/>
+          <include name="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco"/>
         </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso -->
-      <class name="br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado">
-        <methods>
-          <include name="inicio"/>
-          <include name="iniciaExtendReport"/>
-          <include name="finalizaExtendReport"/>
-          <include name="fim"/>
-          <include name="cadastroComPreenchimentoDeDadosIncorretos"/>
-        </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado -->
+      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado -->
     </classes>
   </test> <!-- Suite de testes para projeto de automação em TDD(failed) -->
 </suite> <!-- Failed suite [Teste de automação em TDD com TestNG] -->

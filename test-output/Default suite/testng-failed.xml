@@ -5,6 +5,8 @@
     <classes>
       <class name="br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso">
         <methods>
+          <include name="finalizaExtendReport"/>
+          <include name="iniciaExtendReport"/>
           <include name="inicio"/>
           <include name="fim"/>
           <include name="cadastrarUsuarioNoBanco"/>

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" ignored="0" total="6" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Teste de automação em TDD com TestNG" duration-ms="97200" started-at="2020-03-01T20:01:56 BRT" finished-at="2020-03-01T20:03:33 BRT">
+  <suite name="Teste de automação em TDD com TestNG" duration-ms="116311" started-at="2020-03-01T20:21:46 BRT" finished-at="2020-03-01T20:23:42 BRT">
     <groups>
     </groups>
-    <test name="Suite de testes para projeto de automação em TDD" duration-ms="97200" started-at="2020-03-01T20:01:56 BRT" finished-at="2020-03-01T20:03:33 BRT">
+    <test name="Suite de testes para projeto de automação em TDD" duration-ms="116311" started-at="2020-03-01T20:21:46 BRT" finished-at="2020-03-01T20:23:42 BRT">
       <class name="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso">
-        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@1f554b06]" name="iniciaExtendReport" is-config="true" duration-ms="1" started-at="2020-03-01T20:01:56 BRT" finished-at="2020-03-01T20:01:56 BRT">
+        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@1f554b06]" name="iniciaExtendReport" is-config="true" duration-ms="1" started-at="2020-03-01T20:21:46 BRT" finished-at="2020-03-01T20:21:46 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciaExtendReport -->
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@1f554b06]" name="inicio" is-config="true" duration-ms="4256" started-at="2020-03-01T20:02:41 BRT" finished-at="2020-03-01T20:02:45 BRT">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@1f554b06]" name="inicio" is-config="true" duration-ms="6945" started-at="2020-03-01T20:22:37 BRT" finished-at="2020-03-01T20:22:44 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="PASS" signature="consultaProdutoPorBarraDePesquisa()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@1f554b06]" name="consultaProdutoPorBarraDePesquisa" duration-ms="6288" started-at="2020-03-01T20:02:45 BRT" finished-at="2020-03-01T20:02:52 BRT">
+        <test-method status="PASS" signature="consultaProdutoPorBarraDePesquisa()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@1f554b06]" name="consultaProdutoPorBarraDePesquisa" duration-ms="6610" started-at="2020-03-01T20:22:44 BRT" finished-at="2020-03-01T20:22:51 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- consultaProdutoPorBarraDePesquisa -->
-        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@1f554b06]" name="fim" is-config="true" duration-ms="1051" started-at="2020-03-01T20:02:52 BRT" finished-at="2020-03-01T20:02:53 BRT">
+        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@1f554b06]" name="fim" is-config="true" duration-ms="1092" started-at="2020-03-01T20:22:51 BRT" finished-at="2020-03-01T20:22:52 BRT">
           <params>
             <param index="0">
               <value>
@@ -30,131 +30,126 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@1f554b06]" name="finalizaExtendReport" is-config="true" duration-ms="51" started-at="2020-03-01T20:03:33 BRT" finished-at="2020-03-01T20:03:33 BRT">
+        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso@1f554b06]" name="finalizaExtendReport" is-config="true" duration-ms="54" started-at="2020-03-01T20:23:42 BRT" finished-at="2020-03-01T20:23:42 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaExtendReport -->
       </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorBarraDePesquisaSucesso -->
       <class name="br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso">
-        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799]" name="iniciaExtendReport" is-config="true" duration-ms="1" started-at="2020-03-01T20:01:56 BRT" finished-at="2020-03-01T20:01:56 BRT">
+        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799]" name="iniciaExtendReport" is-config="true" duration-ms="1" started-at="2020-03-01T20:21:46 BRT" finished-at="2020-03-01T20:21:46 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciaExtendReport -->
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799]" name="inicio" is-config="true" duration-ms="4811" started-at="2020-03-01T20:03:01 BRT" finished-at="2020-03-01T20:03:06 BRT">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799]" name="inicio" is-config="true" duration-ms="6060" started-at="2020-03-01T20:23:11 BRT" finished-at="2020-03-01T20:23:17 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="FAIL" signature="consultaProdutoPorCategoriaEEfetuaCompra()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799]" name="consultaProdutoPorCategoriaEEfetuaCompra" duration-ms="8451" started-at="2020-03-01T20:03:06 BRT" finished-at="2020-03-01T20:03:15 BRT">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a class="productName ng-binding">...</a> is not clickable at point (643, 589). Other element would receive the click: <div class="PopUp" style="display: block;">...</div>
-  (Session info: chrome=80.0.3987.122)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-QI1A0TH', ip: '192.168.25.213', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Lucas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58892}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c018599b6241c2e1d67d90b9bcefa91c]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="productName ng-binding">...</a> is not clickable at point (643, 589). Other element would receive the click: <div class="PopUp" style="display: block;">...</div>
-  (Session info: chrome=80.0.3987.122)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-QI1A0TH', ip: '192.168.25.213', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Lucas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58892}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c018599b6241c2e1d67d90b9bcefa91c
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at br.com.rsinet.hub_tdd.pageObject.PesquisaPage.selecionaProdutoCat(PesquisaPage.java:43)
-at br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso.consultaProdutoPorCategoriaEEfetuaCompra(ConsultaPorCategoriaSucesso.java:75)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method status="PASS" signature="consultaProdutoPorCategoriaEEfetuaCompra()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799]" name="consultaProdutoPorCategoriaEEfetuaCompra" duration-ms="8216" started-at="2020-03-01T20:23:17 BRT" finished-at="2020-03-01T20:23:25 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- consultaProdutoPorCategoriaEEfetuaCompra -->
-        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799]" name="fim" is-config="true" duration-ms="1159" started-at="2020-03-01T20:03:15 BRT" finished-at="2020-03-01T20:03:16 BRT">
+        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799]" name="fim" is-config="true" duration-ms="2463" started-at="2020-03-01T20:23:25 BRT" finished-at="2020-03-01T20:23:27 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=consultaProdutoPorCategoriaEEfetuaCompra status=FAILURE method=ConsultaPorCategoriaSucesso.consultaProdutoPorCategoriaEEfetuaCompra()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799] output={null}]]]>
+                <![CDATA[[TestResult name=consultaProdutoPorCategoriaEEfetuaCompra status=SUCCESS method=ConsultaPorCategoriaSucesso.consultaProdutoPorCategoriaEEfetuaCompra()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799]" name="finalizaExtendReport" is-config="true" duration-ms="43" started-at="2020-03-01T20:03:33 BRT" finished-at="2020-03-01T20:03:33 BRT">
+        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso@1c3a4799]" name="finalizaExtendReport" is-config="true" duration-ms="54" started-at="2020-03-01T20:23:42 BRT" finished-at="2020-03-01T20:23:42 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaExtendReport -->
       </class> <!-- br.com.rsinet.hub_tdd.testes.sucessos.ConsultaPorCategoriaSucesso -->
       <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado">
-        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2]" name="iniciaExtendReport" is-config="true" duration-ms="1" started-at="2020-03-01T20:01:56 BRT" finished-at="2020-03-01T20:01:56 BRT">
+        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2]" name="iniciaExtendReport" is-config="true" duration-ms="1" started-at="2020-03-01T20:21:46 BRT" finished-at="2020-03-01T20:21:46 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciaExtendReport -->
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2]" name="inicio" is-config="true" duration-ms="5636" started-at="2020-03-01T20:03:16 BRT" finished-at="2020-03-01T20:03:21 BRT">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2]" name="inicio" is-config="true" duration-ms="4624" started-at="2020-03-01T20:23:27 BRT" finished-at="2020-03-01T20:23:32 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="FAIL" signature="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2]" name="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho" duration-ms="9154" started-at="2020-03-01T20:03:21 BRT" finished-at="2020-03-01T20:03:31 BRT">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method status="PASS" signature="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2]" name="consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho" duration-ms="8587" started-at="2020-03-01T20:23:32 BRT" finished-at="2020-03-01T20:23:41 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho -->
+        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2]" name="fim" is-config="true" duration-ms="1132" started-at="2020-03-01T20:23:41 BRT" finished-at="2020-03-01T20:23:42 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho status=SUCCESS method=ConsultaPorCategoriaErrado.consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fim -->
+        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2]" name="finalizaExtendReport" is-config="true" duration-ms="53" started-at="2020-03-01T20:23:42 BRT" finished-at="2020-03-01T20:23:42 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaExtendReport -->
+      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado -->
+      <class name="br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado">
+        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49]" name="iniciaExtendReport" is-config="true" duration-ms="226" started-at="2020-03-01T20:21:46 BRT" finished-at="2020-03-01T20:21:46 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- iniciaExtendReport -->
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49]" name="inicio" is-config="true" duration-ms="5357" started-at="2020-03-01T20:22:13 BRT" finished-at="2020-03-01T20:22:19 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicio -->
+        <test-method status="PASS" signature="cadastroComPreenchimentoDeDadosIncorretos()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49]" name="cadastroComPreenchimentoDeDadosIncorretos" duration-ms="17363" started-at="2020-03-01T20:22:19 BRT" finished-at="2020-03-01T20:22:36 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cadastroComPreenchimentoDeDadosIncorretos -->
+        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49]" name="fim" is-config="true" duration-ms="1237" started-at="2020-03-01T20:22:36 BRT" finished-at="2020-03-01T20:22:37 BRT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cadastroComPreenchimentoDeDadosIncorretos status=SUCCESS method=CadastroErrado.cadastroComPreenchimentoDeDadosIncorretos()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fim -->
+        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49]" name="finalizaExtendReport" is-config="true" duration-ms="464" started-at="2020-03-01T20:23:42 BRT" finished-at="2020-03-01T20:23:42 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizaExtendReport -->
+      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado -->
+      <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado">
+        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548]" name="iniciaExtendReport" is-config="true" duration-ms="1" started-at="2020-03-01T20:21:46 BRT" finished-at="2020-03-01T20:21:46 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- iniciaExtendReport -->
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548]" name="inicio" is-config="true" duration-ms="5285" started-at="2020-03-01T20:22:52 BRT" finished-at="2020-03-01T20:22:57 BRT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicio -->
+        <test-method status="FAIL" signature="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548]" name="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco" duration-ms="12063" started-at="2020-03-01T20:22:57 BRT" finished-at="2020-03-01T20:23:09 BRT">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[element click intercepted: Element <a class="productName ng-binding">...</a> is not clickable at point (643, 589). Other element would receive the click: <div class="PopUp" style="display: block;">...</div>
+              <![CDATA[element not interactable
   (Session info: chrome=80.0.3987.122)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-QI1A0TH', ip: '192.168.25.213', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Lucas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58934}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: aee15ebc52e1c7aa3bc2ae0034734bfd]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Lucas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59921}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 68f996799e1ae81aaaf0cfcd0dba2c08]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a class="productName ng-binding">...</a> is not clickable at point (643, 589). Other element would receive the click: <div class="PopUp" style="display: block;">...</div>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
   (Session info: chrome=80.0.3987.122)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-QI1A0TH', ip: '192.168.25.213', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Lucas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58934}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: aee15ebc52e1c7aa3bc2ae0034734bfd
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Lucas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59921}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 68f996799e1ae81aaaf0cfcd0dba2c08
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -167,8 +162,13 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
 at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at br.com.rsinet.hub_tdd.pageObject.PesquisaPage.selecionaProdutoCat(PesquisaPage.java:43)
-at br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado.consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho(ConsultaPorCategoriaErrado.java:75)
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy11.click(Unknown Source)
+at br.com.rsinet.hub_tdd.pageObject.HomePage.bt_Lupa(HomePage.java:84)
+at br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado.consultaPorBarraDePesquisaComProdutoInexistenteNoBanco(ConsultaPorBarraDePesquisaErrado.java:56)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -199,205 +199,51 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho -->
-        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2]" name="fim" is-config="true" duration-ms="1671" started-at="2020-03-01T20:03:31 BRT" finished-at="2020-03-01T20:03:32 BRT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho status=FAILURE method=ConsultaPorCategoriaErrado.consultaPorCategoriaComQuantidadeAcimaDoPermitidoNoCarrinho()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fim -->
-        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado@131276c2]" name="finalizaExtendReport" is-config="true" duration-ms="48" started-at="2020-03-01T20:03:33 BRT" finished-at="2020-03-01T20:03:33 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalizaExtendReport -->
-      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorCategoriaErrado -->
-      <class name="br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado">
-        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49]" name="iniciaExtendReport" is-config="true" duration-ms="213" started-at="2020-03-01T20:01:56 BRT" finished-at="2020-03-01T20:01:56 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- iniciaExtendReport -->
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49]" name="inicio" is-config="true" duration-ms="4731" started-at="2020-03-01T20:02:21 BRT" finished-at="2020-03-01T20:02:26 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- inicio -->
-        <test-method status="FAIL" signature="cadastroComPreenchimentoDeDadosIncorretos()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49]" name="cadastroComPreenchimentoDeDadosIncorretos" duration-ms="14629" started-at="2020-03-01T20:02:26 BRT" finished-at="2020-03-01T20:02:40 BRT">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Cannot locate element with text: Brazil
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-QI1A0TH', ip: '192.168.25.213', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Brazil
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-QI1A0TH', ip: '192.168.25.213', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
-at br.com.rsinet.hub_tdd.pageObject.CadastroPage.preenchePais(CadastroPage.java:106)
-at br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado.cadastroComPreenchimentoDeDadosIncorretos(CadastroErrado.java:75)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cadastroComPreenchimentoDeDadosIncorretos -->
-        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49]" name="fim" is-config="true" duration-ms="1025" started-at="2020-03-01T20:02:40 BRT" finished-at="2020-03-01T20:02:41 BRT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=cadastroComPreenchimentoDeDadosIncorretos status=FAILURE method=CadastroErrado.cadastroComPreenchimentoDeDadosIncorretos()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fim -->
-        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado@614ddd49]" name="finalizaExtendReport" is-config="true" duration-ms="479" started-at="2020-03-01T20:03:32 BRT" finished-at="2020-03-01T20:03:33 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finalizaExtendReport -->
-      </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.CadastroErrado -->
-      <class name="br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado">
-        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548]" name="iniciaExtendReport" is-config="true" duration-ms="1" started-at="2020-03-01T20:01:56 BRT" finished-at="2020-03-01T20:01:56 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- iniciaExtendReport -->
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548]" name="inicio" is-config="true" duration-ms="4261" started-at="2020-03-01T20:02:53 BRT" finished-at="2020-03-01T20:02:57 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- inicio -->
-        <test-method status="PASS" signature="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548]" name="consultaPorBarraDePesquisaComProdutoInexistenteNoBanco" duration-ms="3231" started-at="2020-03-01T20:02:57 BRT" finished-at="2020-03-01T20:03:00 BRT">
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- consultaPorBarraDePesquisaComProdutoInexistenteNoBanco -->
-        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548]" name="fim" is-config="true" duration-ms="1056" started-at="2020-03-01T20:03:00 BRT" finished-at="2020-03-01T20:03:01 BRT">
+        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548]" name="fim" is-config="true" duration-ms="1194" started-at="2020-03-01T20:23:09 BRT" finished-at="2020-03-01T20:23:11 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=consultaPorBarraDePesquisaComProdutoInexistenteNoBanco status=SUCCESS method=ConsultaPorBarraDePesquisaErrado.consultaPorBarraDePesquisaComProdutoInexistenteNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548] output={null}]]]>
+                <![CDATA[[TestResult name=consultaPorBarraDePesquisaComProdutoInexistenteNoBanco status=FAILURE method=ConsultaPorBarraDePesquisaErrado.consultaPorBarraDePesquisaComProdutoInexistenteNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548]" name="finalizaExtendReport" is-config="true" duration-ms="59" started-at="2020-03-01T20:03:33 BRT" finished-at="2020-03-01T20:03:33 BRT">
+        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado@694e1548]" name="finalizaExtendReport" is-config="true" duration-ms="63" started-at="2020-03-01T20:23:42 BRT" finished-at="2020-03-01T20:23:42 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaExtendReport -->
       </class> <!-- br.com.rsinet.hub_tdd.testes.falhas.ConsultaPorBarraDePesquisaErrado -->
       <class name="br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso">
-        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36]" name="iniciaExtendReport" is-config="true" duration-ms="2" started-at="2020-03-01T20:01:56 BRT" finished-at="2020-03-01T20:01:56 BRT">
+        <test-method status="PASS" signature="iniciaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36]" name="iniciaExtendReport" is-config="true" duration-ms="1" started-at="2020-03-01T20:21:46 BRT" finished-at="2020-03-01T20:21:46 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciaExtendReport -->
-        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36]" name="inicio" is-config="true" duration-ms="9618" started-at="2020-03-01T20:01:56 BRT" finished-at="2020-03-01T20:02:06 BRT">
+        <test-method status="PASS" signature="inicio()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36]" name="inicio" is-config="true" duration-ms="8249" started-at="2020-03-01T20:21:46 BRT" finished-at="2020-03-01T20:21:55 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inicio -->
-        <test-method status="FAIL" signature="cadastrarUsuarioNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36]" name="cadastrarUsuarioNoBanco" duration-ms="13912" started-at="2020-03-01T20:02:06 BRT" finished-at="2020-03-01T20:02:20 BRT">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Cannot locate element with text: Brazil
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-QI1A0TH', ip: '192.168.25.213', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Brazil
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-QI1A0TH', ip: '192.168.25.213', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
-at br.com.rsinet.hub_tdd.pageObject.CadastroPage.preenchePais(CadastroPage.java:106)
-at br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso.cadastrarUsuarioNoBanco(CadastroSucesso.java:75)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="cadastrarUsuarioNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36]" name="cadastrarUsuarioNoBanco" duration-ms="17368" started-at="2020-03-01T20:21:55 BRT" finished-at="2020-03-01T20:22:12 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cadastrarUsuarioNoBanco -->
-        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36]" name="fim" is-config="true" duration-ms="1229" started-at="2020-03-01T20:02:20 BRT" finished-at="2020-03-01T20:02:21 BRT">
+        <test-method status="PASS" signature="fim(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36]" name="fim" is-config="true" duration-ms="1407" started-at="2020-03-01T20:22:12 BRT" finished-at="2020-03-01T20:22:13 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cadastrarUsuarioNoBanco status=FAILURE method=CadastroSucesso.cadastrarUsuarioNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36] output={null}]]]>
+                <![CDATA[[TestResult name=cadastrarUsuarioNoBanco status=SUCCESS method=CadastroSucesso.cadastrarUsuarioNoBanco()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fim -->
-        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36]" name="finalizaExtendReport" is-config="true" duration-ms="60" started-at="2020-03-01T20:03:33 BRT" finished-at="2020-03-01T20:03:33 BRT">
+        <test-method status="PASS" signature="finalizaExtendReport()[pri:0, instance:br.com.rsinet.hub_tdd.testes.sucessos.CadastroSucesso@76707e36]" name="finalizaExtendReport" is-config="true" duration-ms="69" started-at="2020-03-01T20:23:42 BRT" finished-at="2020-03-01T20:23:42 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaExtendReport -->
