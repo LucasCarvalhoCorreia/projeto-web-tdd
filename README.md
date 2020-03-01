@@ -38,6 +38,7 @@ projeto-web-tdd
       - ConsultaPorCategoriaSucesso.java (classe responsável por executar o teste de consulta de produto por categoria na pagina inicial com cenário de sucesso.)
       
   - target
-        
+    - Reports.html (Relatório gerado pelo extend report no final dos testes.)
+    
   - pom.xml (arquivo onde são declaradas as dependencias do maven.)
   - SuiteDeTestes.xml (arquivo utilizado para executar todos os testes de falha e sucesso de uma vez para gerar um único report.)
