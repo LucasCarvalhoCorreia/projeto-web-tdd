@@ -1,9 +1,9 @@
-# projeto-tdd
+# projeto-web-tdd
 Projeto desenvolvido com o objetivo de testar conhecimentos em relação a desenvolvimento de testes de automação em TDD.
 
 Conteúdo e descrições do projeto:
 
-projeto-tdd
+projeto-web-tdd
   - src/main/java (pasta onde estão as classes e pacotes)
     - br.com.rsinet.hub_tdd.pageFactory (pacote onde foram criadas as classes de manipulação de elementos por pagina.)
       - CadastroPage.java (classe responsável por executar os elementos localizados na página de cadastro.)
