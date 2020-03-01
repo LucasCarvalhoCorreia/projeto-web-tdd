@@ -103,7 +103,9 @@ public class CadastroPage {
 	}
 
 	public void preenchePais(String combo_Pais) {
+		this.combo_Pais.click();
 		new Select(this.combo_Pais).selectByVisibleText(combo_Pais);
+		this.combo_Pais.click();
 	}
 
 	public void preencheCidade(String txt_Cidade) {
